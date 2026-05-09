@@ -8,6 +8,8 @@ icon: terminal
 
 Backed exposes operator workflows through repository scripts and the `backed` CLI.
 
+These tools exist because some actions should remain explicit, reproducible, and easy to verify after the fact. They are not only conveniences. They are part of the control surface of the platform.
+
 ## Repository scripts
 
 | Script | Purpose |
@@ -36,6 +38,12 @@ Backed exposes operator workflows through repository scripts and the `backed` CL
 | `BACKED_ALLOWLIST` | Overrides the resolved allowlist address |
 | `BACKED_PRIVATE_KEY` | Preferred write secret |
 | `PRIVATE_KEY` | Fallback write secret |
+
+## How to think about the tooling split
+
+The application is the most useful surface for discovery and general interaction.
+
+Scripts and CLI become more appropriate as soon as the action becomes privileged, repeatable, or sensitive to environment and signer choice.
 
 ## Common command patterns
 

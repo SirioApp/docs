@@ -8,6 +8,8 @@ icon: file-code
 
 Backed is built around a compact contract surface in which each component has a distinct responsibility.
 
+The goal of this design is not complexity for its own sake. It is to preserve clean boundaries between project creation, approval, participation, settlement, and treasury control.
+
 ## AgentRaiseFactory
 
 The primary protocol control contract for:
@@ -40,6 +42,14 @@ The execution boundary that restricts what treasury-controlled execution can tar
 ## SafeModuleSetup
 
 Deployment-side setup used when treasury control is wired through Safe modules.
+
+## Why the split matters
+
+Keeping these responsibilities distinct makes the system easier to reason about:
+
+- project existence and approval are not conflated with sale activity,
+- sale logic is not conflated with treasury execution controls,
+- post-close ownership is not conflated with pre-close commitments.
 
 ## External dependencies
 

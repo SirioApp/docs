@@ -16,6 +16,16 @@ Backed is easiest to understand as a layered operating model.
 | Treasury controls | Restrict sensitive execution paths |
 | Interfaces | Application, scripts, and CLI surfaces used by different actors |
 
+## Two ways to read the platform
+
+There are two useful ways to understand Backed.
+
+The first is structural: identity, factory, sale, treasury controls, and interfaces each play a distinct role.
+
+The second is chronological: a raise moves from identity prerequisite to configuration, creation, approval, commitment, resolution, and post-close ownership outcomes.
+
+Most confusion comes from mixing these two views. A reader sees a project in the interface and assumes it is already fully launched, when what they are really seeing may only be one stage in a broader lifecycle.
+
 ## Core flow
 
 <Steps>
@@ -38,6 +48,16 @@ Backed is easiest to understand as a layered operating model.
     Finalization, refundability, claims, and later redemption behavior are determined by sale and vault state.
   </Step>
 </Steps>
+
+## What changes at each stage
+
+When a raise moves from one stage to another, the meaning of the project changes.
+
+- Before creation, there is no project-level raise state.
+- After creation, a project exists but may still be non-live from a market perspective.
+- After approval, the project can be treated as launched.
+- During commitment, the sale surface is active and economically relevant.
+- After resolution, participants should reason about claims, refunds, and ownership according to the contract-defined outcome.
 
 ## Why the model is structured this way
 
@@ -64,3 +84,5 @@ Anyone evaluating a raise should separate four different questions:
 - Has it been approved?
 - Is the sale currently active?
 - What does the current sale state imply for capital, claims, or refunds?
+
+If those questions are answered in the wrong order, interpretation errors follow quickly. A project that exists may be treated as if it were already launched. A raise that is visible may be mistaken for one that is actively open. A close event may be mistaken for finalized settlement. The purpose of Backed’s structure is to reduce those ambiguities.

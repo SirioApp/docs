@@ -8,6 +8,8 @@ icon: hand-coins
 
 This guide is for participants committing capital into a Backed raise.
 
+Its purpose is to make the evaluation process cleaner. A participant should be able to distinguish between product presentation, current launch state, active commitment conditions, and post-close outcomes.
+
 ## What to verify before committing
 
 1. The environment: testnet or mainnet.
@@ -15,6 +17,17 @@ This guide is for participants committing capital into a Backed raise.
 3. The collateral token: USDM.
 4. The current sale window and approval state.
 5. The current sale status according to the contract.
+
+## A sensible investor reading order
+
+In practice, the best order is:
+
+1. verify the environment,
+2. identify the project,
+3. confirm the project is approved,
+4. confirm the sale is active,
+5. confirm the commitment asset and timing,
+6. only then decide whether to participate.
 
 ## Commitment model
 
@@ -35,6 +48,8 @@ An investor is evaluating more than a narrative. In practice, the investor is ev
 - whether the commitment asset and environment are correct,
 - what the post-close state will imply for claims or refunds.
 
+This is why Backed separates lifecycle states so explicitly. An investor should not have to guess whether a project is merely visible, actually approved, currently active, or already in a post-close state.
+
 ## After the sale closes
 
 Depending on sale state, investors may see:
@@ -42,6 +57,8 @@ Depending on sale state, investors may see:
 - a finalized sale with claim paths,
 - a failed sale with refund paths,
 - later redemption behavior through the vault ownership surface.
+
+The important point is that these are not cosmetic differences. They affect what the participant can do next and what the committed capital now represents.
 
 ## Practical investor discipline
 

@@ -8,15 +8,19 @@ icon: circle-help
 
 ## What is the source of truth for a raise?
 
-The deployed contracts.
+The deployed contracts are the source of truth for approval state, commitments, settlement, claims, and refunds.
 
 ## Why is approval separate from creation?
 
-Because Backed uses approval as an explicit launch gate.
+Because Backed uses approval as an explicit launch gate. A project can exist before it should be treated as live.
 
 ## Which asset is used for commitments?
 
 USDM in the current deployment model.
+
+## Why does environment selection matter so much?
+
+Because testnet and mainnet are separate deployment surfaces with different addresses and different state histories. The same assumption on the wrong environment produces the wrong interpretation.
 
 ## When should I use scripts or CLI instead of the app?
 

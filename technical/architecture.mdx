@@ -8,6 +8,8 @@ icon: blocks
 
 Backed is a contract-centric system with multiple interface layers around it.
 
+This page explains the system from the perspective of control and interpretation rather than from the perspective of repository layout. That is the only way to keep the architecture useful to operators, integrators, and sophisticated participants at the same time.
+
 ## Primary components
 
 | Component | Responsibility |
@@ -19,6 +21,18 @@ Backed is a contract-centric system with multiple interface layers around it.
 | ContractAllowlist | Constrains treasury execution targets |
 | SafeModuleSetup | Supports Safe-based treasury control |
 | UI, scripts, CLI | Provide interaction surfaces over the same stack |
+
+## How the pieces relate
+
+The identity layer establishes who the raise belongs to.
+
+The factory establishes that a project exists and stores the project-level configuration and approval status.
+
+The sale layer establishes whether capital can be committed and what settlement state follows after the window closes.
+
+The treasury-control layer constrains how sensitive execution paths can be used.
+
+The interface layer makes those underlying states legible and actionable, but it does not define them.
 
 ## Architectural boundaries
 
@@ -46,3 +60,5 @@ When reviewing the platform, read from the inside out:
 2. manifests define targeting,
 3. interfaces define convenience,
 4. operators define execution discipline.
+
+That order is also a useful discipline when debugging. Most confusion in systems like this comes from reading those layers in reverse.

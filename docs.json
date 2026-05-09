@@ -74,10 +74,10 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Overview",
+        "tab": "Introduction",
         "groups": [
           {
-            "group": "Start Here",
+            "group": "Platform Fundamentals",
             "pages": [
               "index",
               "guides/getting-started",
@@ -90,10 +90,10 @@
         ]
       },
       {
-        "tab": "Using Backed",
+        "tab": "Participants",
         "groups": [
           {
-            "group": "Audience Guides",
+            "group": "Founder and Investor Guides",
             "pages": [
               "guides/founder-guide",
               "guides/investor-guide",
@@ -106,7 +106,7 @@
         "tab": "Operations",
         "groups": [
           {
-            "group": "Runbooks",
+            "group": "Runbooks and Controls",
             "pages": [
               "operations/operator-model",
               "operations/checklists",
@@ -120,7 +120,7 @@
         "tab": "Technical",
         "groups": [
           {
-            "group": "Architecture and Reference",
+            "group": "Architecture and Integration",
             "pages": [
               "technical/architecture",
               "technical/contracts-and-roles",
@@ -135,7 +135,7 @@
         "tab": "Trust",
         "groups": [
           {
-            "group": "Risk and Support",
+            "group": "Risk, Security, and Support",
             "pages": [
               "trust/security-model",
               "trust/risk-boundaries",

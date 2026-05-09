@@ -8,6 +8,8 @@ icon: users
 
 Backed is intentionally explicit about who is responsible for what.
 
+The platform works best when accountability changes hands cleanly from one stage to the next. Founders should not implicitly inherit operator responsibilities. Investors should not be expected to infer hidden launch state. Operators should not rely on ambiguity where explicit verification is required.
+
 ## Founders
 
 Founders are responsible for the correctness of the project they initiate.
@@ -19,6 +21,8 @@ They should:
 - verify collateral and timing assumptions,
 - avoid public promotion before approval is complete.
 
+In other words, founders own preparation quality and launch readiness, but not the final approval authority unless those roles are deliberately combined.
+
 ## Investors
 
 Investors commit capital into the sale contract and should evaluate the raise using contract-backed facts rather than interface assumptions alone.
@@ -29,6 +33,8 @@ They should:
 - confirm the project identifier,
 - confirm the collateral token is USDM,
 - verify live sale timing and status before committing.
+
+Investors are not expected to operate the system, but they are expected to distinguish between visibility, approval, activity, and settlement.
 
 ## Operators
 
@@ -42,6 +48,8 @@ They are responsible for:
 - allowlist and treasury boundaries,
 - state verification when interfaces disagree.
 
+Operators are the layer that converts protocol capability into disciplined execution. If a launch is presented as live, an approval exists. If a state discrepancy is investigated, the relevant contract reads should support the conclusion.
+
 ## Contracts
 
 The contract layer is the authoritative lifecycle surface. It determines:
@@ -50,6 +58,8 @@ The contract layer is the authoritative lifecycle surface. It determines:
 - whether a sale is active, finalized, or failed,
 - whether claims or refunds are available,
 - which addresses and balances define current state.
+
+This role is not metaphorical. It is the reason why the system can expose a clean product surface without turning product messaging into the authority on economic state.
 
 ## Boundary table
 

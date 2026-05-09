@@ -8,6 +8,8 @@ icon: siren
 
 When something looks wrong, start by assuming the contracts are right and your assumptions may be wrong.
 
+This is the fastest way to reduce noise. Many incident reports begin as a mismatch between expectation and state, not as a failure of the protocol itself.
+
 ## Verification order
 
 1. Confirm environment.
@@ -16,6 +18,8 @@ When something looks wrong, start by assuming the contracts are right and your a
 4. Confirm the sale address.
 5. Read current approval and sale state.
 6. Compare interface output only after the onchain facts are established.
+
+This order matters because it prevents interpretation errors from compounding. If you start from screenshots or interface labels before confirming the environment and target object, you can spend time explaining the wrong state entirely.
 
 ## Typical incident classes
 
@@ -30,3 +34,7 @@ When something looks wrong, start by assuming the contracts are right and your a
 <Tip>
   Many apparent bugs in operator workflows are actually environment mismatches or stale assumptions about approval or sale state.
 </Tip>
+
+## Response standard
+
+An incident response should end with a state-based explanation, not only with a symptom-based explanation. The useful closing question is not just “what looked wrong?” but “what does the contract state actually say, and which assumption caused the mismatch?”

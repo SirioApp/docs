@@ -8,6 +8,8 @@ icon: plug
 
 This page is for teams building around Backed rather than only using the product interface.
 
+The safest integrations are the ones that reproduce the same ordering discipline the platform expects from human operators: select the environment, identify the project, read the state, then decide whether action is appropriate.
+
 ## Recommended read pattern
 
 Start from the environment and factory:
@@ -17,6 +19,8 @@ Start from the environment and factory:
 3. enumerate or fetch the target project,
 4. resolve the sale address,
 5. derive current state from the relevant contract reads.
+
+This pattern minimizes the chance that your integration will treat a visible project as if it were already approved or a created sale as if it were already resolved.
 
 ## Recommended write pattern
 

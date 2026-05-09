@@ -8,9 +8,13 @@ icon: shield
 
 Backed uses an explicit operator model because some actions carry high trust and high impact.
 
+This section exists because operational clarity is part of the product, not an afterthought. If launch control, verification, and privileged writes are treated casually, the rest of the documentation becomes misleading.
+
 ## Why operators matter
 
 Backed does not hide privileged workflows behind vague administrative abstractions. It treats operator actions as controlled, reviewable responsibilities.
+
+That approach protects both the market-facing side of the platform and the teams operating it. It preserves a clean distinction between what ordinary participants can assume and what must be actively verified by someone with authority.
 
 ## Operator responsibilities
 
@@ -36,3 +40,5 @@ An operator should consider any write action incomplete until all of the followi
 ## Practical expectation
 
 Operator workflows in Backed should be understandable after the fact. If a project was approved, a target was changed, or a raise was treated as live, the rationale and the resulting state should both be explainable from observable facts.
+
+In a well-run environment, an operator should be able to explain not just what action was taken, but why that action was valid in that specific environment and what contract state confirms it.
