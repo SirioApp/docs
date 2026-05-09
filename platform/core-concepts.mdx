@@ -1,0 +1,75 @@
+---
+title: Core Concepts
+description: The concepts that define how Backed behaves operationally and onchain.
+icon: shapes
+---
+
+# Core Concepts
+
+## Agent identity
+
+Every raise references an existing agent identifier from the ERC8004 Identity Registry. Backed does not treat project creation as identity creation.
+
+This means:
+
+- a founder needs a valid agent before opening a raise;
+- the factory reads the agent wallet from the identity registry;
+- a missing or invalid agent ID blocks the creation flow.
+
+## Project
+
+A project is the platform-level record created by the factory. It stores the metadata and core addresses associated with a raise.
+
+Typical project data includes:
+
+- agent identifier
+- project name and description
+- categories
+- treasury address
+- sale address
+- executor address
+- collateral token
+
+## Approval
+
+Approval is the operational gate between an existing project and a project that should be treated as live.
+
+Without approval:
+
+- the project may exist onchain,
+- but it should not be treated as publicly launched,
+- and operators should not assume it is discoverable or market-ready.
+
+## Sale state
+
+The sale contract determines commitment and close behavior. Interfaces can render that state, but they do not define it.
+
+Key sale outcomes include:
+
+- active commitment window
+- finalized settlement
+- failed sale
+- claim availability
+- refund availability
+
+## Share token
+
+After settlement, ownership resolves through the vault share token. This is the post-raise ownership surface, not just a cosmetic receipt.
+
+## Environment
+
+Backed runs against explicit deployment manifests for testnet and mainnet.
+
+Environment selection affects:
+
+- chain ID
+- RPC endpoint
+- contract addresses
+- identity registry address
+- collateral token address
+
+Environment mismatches are an operational failure mode, not a minor configuration issue.
+
+<Warning>
+  Never reason about project state without first knowing which environment you are reading.
+</Warning>

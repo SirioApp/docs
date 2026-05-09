@@ -1,72 +1,129 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
   "favicon": "/favicon.svg",
+  "name": "Backed",
+  "theme": "mint",
+  "description": "Canonical platform documentation for Backed on MegaETH.",
+  "colors": {
+    "primary": "#111827",
+    "light": "#1F2937",
+    "dark": "#0B1220"
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "contextual": {
+    "options": [
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "cursor",
+      "vscode"
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Platform",
+        "href": "https://backed.fi"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Launch App",
+      "href": "https://backed.fi"
+    }
+  },
+  "footer": {
+    "links": [
+      {
+        "header": "Platform",
+        "items": [
+          {
+            "label": "Overview",
+            "href": "/platform/overview"
+          },
+          {
+            "label": "Raise Lifecycle",
+            "href": "/lifecycle/overview"
+          }
+        ]
+      },
+      {
+        "header": "Technical",
+        "items": [
+          {
+            "label": "Contracts",
+            "href": "/technical/contracts"
+          },
+          {
+            "label": "Deployments",
+            "href": "/technical/deployments-and-environments"
+          }
+        ]
+      }
+    ],
+    "socials": {
+      "x": "https://x.com/BackedApp",
+      "telegram": "https://t.me/BackedApp"
+    }
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Platform",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Start Here",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "platform/overview",
+              "platform/core-concepts",
+              "platform/roles-and-responsibilities"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Raise Lifecycle",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/components",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "Agent ready",
-            "pages": [
-              "agent-ready/prompt",
-              "agent-ready/visibility",
-              "agent-ready/contextual",
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "lifecycle/overview",
+              "lifecycle/creation-and-approval",
+              "lifecycle/settlement-and-redemptions"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Operators",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Operations",
             "pages": [
-              "api-reference/introduction"
+              "operators/overview",
+              "operators/scripts-and-cli"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Trust and Support",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "trust/security-model",
+              "support/faq"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Technical",
+        "groups": [
+          {
+            "group": "Reference",
+            "pages": [
+              "technical/architecture",
+              "technical/contracts",
+              "technical/deployments-and-environments",
+              "technical/runtime-and-data"
             ]
           }
         ]
@@ -75,52 +132,16 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "MegaETH",
+          "href": "https://www.megaeth.com",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Mintlify",
+          "href": "https://mintlify.com/docs",
+          "icon": "book-open-cover"
         }
       ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
     }
   }
 }

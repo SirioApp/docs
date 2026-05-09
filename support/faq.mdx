@@ -1,0 +1,41 @@
+---
+title: FAQ
+description: Short answers to the questions most likely to arise while using or operating Backed.
+icon: circle-help
+---
+
+# FAQ
+
+## What is the source of truth for a raise?
+
+The deployed contracts are the source of truth. The UI, scripts, and CLI are interfaces to that state.
+
+## Why is project approval separate from project creation?
+
+Because Backed treats approval as an explicit operational gate. A project can exist before it is approved for public use.
+
+## Which collateral token does Backed currently use?
+
+The current platform deployment model uses USDM as the collateral token.
+
+## Does the environment matter if I am only reading?
+
+Yes. Reads against the wrong environment can lead you to the wrong project list, wrong addresses, and wrong lifecycle interpretation.
+
+## When should I use scripts or the CLI instead of the application?
+
+Use scripts or the CLI when the workflow is privileged, repeatable, or requires explicit operator control over signer, environment, or contract targeting.
+
+## What should I verify before committing capital?
+
+Verify:
+
+- testnet versus mainnet,
+- project identifier,
+- sale timing,
+- collateral token,
+- current sale state.
+
+## What should I do if the UI and the chain disagree?
+
+Treat the chain as authoritative and verify the relevant project and sale data directly from the deployed contracts.

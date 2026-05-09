@@ -1,0 +1,56 @@
+---
+title: Creation and Approval
+description: How a raise is created, validated, and approved before it should be treated as live.
+icon: circle-check
+---
+
+# Creation and Approval
+
+## Creation prerequisites
+
+Before creating a raise, confirm all of the following:
+
+- a valid agent ID exists;
+- the selected environment is correct;
+- the collateral token is correct for that environment;
+- the launch delay and duration fit factory constraints;
+- token metadata is final.
+
+## What creation does
+
+At creation time, the factory receives the project metadata and timing configuration, validates the collateral, and records the new project onchain.
+
+The creation flow also depends on reading the agent wallet from the identity registry.
+
+## What approval does
+
+Approval is a distinct operator action executed after creation.
+
+Approval exists to preserve a controlled launch boundary:
+
+- creation is not publication;
+- approval is not optional housekeeping;
+- a project should not be marketed or surfaced as live before approval is complete.
+
+## Typical failure modes
+
+| Failure mode | What it means |
+| --- | --- |
+| Invalid agent ID | The referenced identity does not exist or has no wallet |
+| Wrong environment | The operator is pointing at the wrong manifest or RPC |
+| Disallowed collateral | The configured collateral is not permitted by the factory |
+| Missing approval authority | The signing account lacks the required role |
+| Premature promotion | The project is shown publicly before approval is complete |
+
+## Recommended operator checklist
+
+1. Confirm environment and contract addresses.
+2. Read the factory global configuration.
+3. Validate collateral allowlisting.
+4. Create the project and capture the project ID.
+5. Approve the project with an authorized account.
+6. Verify approval onchain before treating the raise as launched.
+
+<Tip>
+  The most common operational mistake is to treat creation output as equivalent to launch. In Backed, approval is the launch gate.
+</Tip>

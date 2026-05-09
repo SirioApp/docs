@@ -1,0 +1,41 @@
+---
+title: Operator Overview
+description: The role of operators and why their workflows are intentionally explicit in Backed.
+icon: shield
+---
+
+# Operator Overview
+
+Backed is not designed around hidden admin flows. Operator responsibilities are explicit because they are high-trust and high-impact.
+
+## Operator workflows
+
+The main operator workflows are:
+
+- inspect environment and deployment state;
+- create raises through controlled scripts where needed;
+- approve projects;
+- inspect sale status;
+- manage contract allowlisting and treasury boundaries.
+
+## Why the operator layer matters
+
+The operator layer exists because some actions should remain deliberate:
+
+- approving a project changes whether it should be treated as live;
+- choosing the wrong environment can target the wrong contracts;
+- privileged contract writes are not ordinary product interactions.
+
+## Tooling model
+
+Backed currently exposes operator workflows through:
+
+- package-level scripts in this repository;
+- the `backed` CLI for explicit operational actions;
+- direct contract reads and writes when needed for verification.
+
+Read [Scripts and CLI](./scripts-and-cli) for the concrete commands and environment variables.
+
+<Warning>
+  Operator mistakes are high-impact because they usually combine signer authority with environment-specific contract targeting.
+</Warning>

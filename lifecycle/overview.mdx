@@ -1,0 +1,63 @@
+---
+title: Raise Lifecycle Overview
+description: The full operational lifecycle of a raise on Backed.
+icon: route
+---
+
+# Raise Lifecycle Overview
+
+Every raise in Backed progresses through a clear sequence.
+
+## Stage 1: Identity exists
+
+The process begins only after an agent identity already exists in the ERC8004 Identity Registry.
+
+## Stage 2: Raise is configured
+
+The founder or operator prepares:
+
+- project metadata
+- categories
+- collateral token
+- launch timing
+- duration
+- vault token name and symbol
+
+## Stage 3: Project is created
+
+The factory creates the project and resolves the project-level addresses required for the rest of the lifecycle.
+
+## Stage 4: Project is approved
+
+An authorized operator approves the project. This is a mandatory gate before public availability.
+
+## Stage 5: Capital is committed
+
+Participants approve USDM and commit during the active sale window.
+
+## Stage 6: Sale resolves
+
+Depending on sale state, the system settles into one of the expected post-close paths:
+
+- finalized and claimable
+- failed and refundable
+- matured for treasury unwind and redemption flows
+
+## Operational rule
+
+Do not compress these stages mentally into a single "launch" concept. Backed intentionally separates identity, creation, approval, participation, and settlement because those steps carry different trust and permission assumptions.
+
+<Steps>
+  <Step title="Identity exists">
+    An ERC8004 agent identity must already exist before a raise can be opened.
+  </Step>
+  <Step title="Project is created">
+    The factory records the project and resolves the addresses required for the raise.
+  </Step>
+  <Step title="Project is approved">
+    An authorized operator explicitly approves the project before it should be treated as live.
+  </Step>
+  <Step title="Capital is committed and resolved">
+    Participants commit USDM, and the sale later settles into claims, refunds, or redemption paths according to contract state.
+  </Step>
+</Steps>

@@ -1,0 +1,58 @@
+---
+title: Architecture
+description: Architectural view of the Backed platform across identity, contracts, treasury controls, and interfaces.
+icon: blocks
+---
+
+# Architecture
+
+Backed should be read as a contract-centric platform with multiple interface layers around it.
+
+## Primary architecture
+
+| Layer | Responsibility |
+| --- | --- |
+| ERC8004 Identity Registry | Resolves agent identity before raise creation |
+| `AgentRaiseFactory` | Creates projects, stores project data, and gates approval |
+| `Sale` | Handles commitments, settlement, claims, and refunds |
+| `AgentVaultToken` | Represents post-settlement ownership |
+| `ContractAllowlist` | Restricts treasury execution targets |
+| `SafeModuleSetup` | Wires the Safe-based treasury control layer |
+| Frontend and operator tools | Read and write against the deployed stack |
+
+## Runtime principle
+
+The interface stack is replaceable. The contract stack is not.
+
+That is why this documentation treats:
+
+- contracts as the source of truth,
+- deployment manifests as routing inputs,
+- interfaces as execution surfaces.
+
+## Interface composition
+
+The current frontend runtime composes:
+
+- wallet and authentication providers,
+- environment-aware contract resolution,
+- viem-based public clients,
+- environment-specific deployment manifests.
+
+## Key architectural boundaries
+
+### Identity boundary
+
+Backed depends on an external identity system rather than embedding identity creation into the raise factory.
+
+### Approval boundary
+
+A project can exist before it is approved. This is a deliberate governance boundary.
+
+### Treasury boundary
+
+Treasury interactions are intentionally constrained through allowlisting and Safe wiring. The platform does not assume unrestricted execution is acceptable.
+
+### Environment boundary
+
+Testnet and mainnet differ by chain, RPC, contracts, and external dependencies. Each environment must be handled as a separate deployment surface.

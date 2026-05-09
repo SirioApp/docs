@@ -1,0 +1,54 @@
+---
+title: Security Model
+description: Trust assumptions, security boundaries, and the operational model behind Backed.
+icon: lock
+---
+
+# Security Model
+
+Backed is contract-first, but it is not trustless in the absolute sense. Its security model combines onchain guarantees with explicit operator responsibilities.
+
+## Security boundaries
+
+### Onchain state boundary
+
+Raise status, approval state, commitments, claims, refunds, and ownership outcomes are defined by deployed contracts.
+
+### Operator boundary
+
+Operators still control high-impact actions such as approval, environment selection, and privileged writes.
+
+### Treasury execution boundary
+
+Treasury interactions are constrained through contract allowlisting and Safe-based setup. This exists to narrow what execution paths are possible from treasury-controlled components.
+
+## Trust assumptions
+
+Users should assume the following:
+
+- the factory and sale contracts are the authoritative lifecycle layer;
+- deployment manifests are correct and current for the selected environment;
+- operators use the correct signer on the correct chain;
+- the collateral token configuration is correct for the environment;
+- UI output can lag or mislead, but direct contract reads remain authoritative.
+
+## Primary operational risks
+
+| Risk | Why it matters |
+| --- | --- |
+| Wrong environment | The same operation can target the wrong chain and wrong contracts |
+| Premature promotion | A created but unapproved project may be mistaken for a live raise |
+| Incorrect collateral assumptions | Users can misunderstand what token is actually required |
+| Privileged key misuse | Approval and other operator actions are high-trust workflows |
+| Interface-state mismatch | Cached or stale UI output can differ from current chain state |
+
+## Practical guidance
+
+When a situation is high-stakes, verify onchain:
+
+- factory address
+- project ID
+- sale address
+- approval state
+- finalization or failure state
+- collateral address

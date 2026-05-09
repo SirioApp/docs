@@ -1,0 +1,43 @@
+---
+title: Runtime and Data
+description: How the current application resolves environment state, clients, contracts, and read models.
+icon: database
+---
+
+# Runtime and Data
+
+This page documents how the current application runtime is composed.
+
+## Runtime surfaces
+
+| Surface | Path | Purpose |
+| --- | --- | --- |
+| Providers | `app/providers.tsx` | Composes authentication, wallet, and optional terminal providers |
+| Deployment resolver | `lib/deployment.ts` | Resolves testnet or mainnet and exposes the active manifest |
+| Contract resolver | `lib/contracts.ts` | Maps the active manifest into typed contract addresses |
+| Read client | `hooks/useMegaReadClient.ts` | Creates the viem public client for the selected environment |
+| Raise contract helpers | `lib/contracts/raise.ts` | Parses project, sale, and global config reads |
+
+## Data model rule
+
+Backed uses the interface runtime to read and format state, not to define it.
+
+That means:
+
+- typed parsers are useful,
+- cached UI state is useful,
+- but the contracts still own the truth.
+
+## Frontend responsibilities
+
+The application currently handles:
+
+- wallet connectivity and session composition;
+- environment-aware contract reads;
+- user-facing raise discovery and participation flows;
+- identity-linked raise creation flows;
+- display of sale status and post-close actions.
+
+## Firebase note
+
+Public dashboard catalog data also relies on Firebase Firestore for public reads in the current product stack. That catalog data is a product concern, not the authority for core raise state.

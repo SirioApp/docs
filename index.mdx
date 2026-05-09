@@ -1,133 +1,77 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
-icon: 'star'
+title: Introduction
+description: Backed is capital infrastructure for autonomous organizations on MegaETH.
+icon: compass
 ---
 
-## Setting up
+# Backed Documentation
 
-Get your documentation site up and running in minutes.
+Backed is capital infrastructure for autonomous organizations on MegaETH.
+
+The platform is built around one core workflow:
+
+1. an agent identity exists,
+2. a raise is created against that identity,
+3. the raise is explicitly approved,
+4. capital is committed in USDM,
+5. the sale settles onchain,
+6. participants claim, refund, or redeem based on sale state.
+
+This documentation is intentionally organized around the platform itself, not around individual repositories. Technical implementation details are included, but they live under technical reference where they belong.
 
 <Card
-  title="Start here"
+  title="Start with the platform"
   icon="rocket"
-  href="/quickstart"
+  href="/platform/overview"
   horizontal
 >
-  Follow our three step quickstart guide.
+  Read the shortest clear explanation of what Backed is, how raises work, and where responsibility sits.
 </Card>
 
-## Make it yours
-
-Design a docs site that looks great and empowers your users.
+## Read by intent
 
 <Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+  <Card title="Understand the product" icon="layout-dashboard" href="/platform/overview">
+    Platform model, core concepts, and roles across founders, investors, and operators.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Follow the raise lifecycle" icon="route" href="/lifecycle/overview">
+    From identity prerequisite to creation, approval, commitment, settlement, and redemption.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Run operations safely" icon="shield-check" href="/operators/overview">
+    Operator workflows, scripts, CLI usage, and explicit control of privileged actions.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Go technical" icon="code" href="/technical/architecture">
+    Contract roles, deployments, runtime resolution, and trust boundaries.
   </Card>
 </Columns>
 
-## Create beautiful pages
+## Platform facts
 
-Everything you need to create world-class documentation.
+<CardGroup cols={3}>
+  <Card title="MegaETH" icon="globe">
+    Backed currently operates across MegaETH testnet and mainnet deployments.
+  </Card>
+  <Card title="USDM collateral" icon="wallet">
+    The active deployment model uses USDM as the collateral asset for commitments.
+  </Card>
+  <Card title="Contracts first" icon="blocks">
+    Deployed contracts define lifecycle state. Interfaces only expose and act on it.
+  </Card>
+</CardGroup>
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+## Documentation principles
 
-## Make your content agent ready
-
-Make your docs work for humans and AI agents alike.
-
-<Columns cols={2}>
-  <Card
-    title="Prompt component"
-    icon="robot"
-    href="/agent-ready/prompt"
-  >
-    Embed shareable AI prompts readers can copy or open in Cursor.
-  </Card>
-  <Card
-    title="Visibility"
-    icon="eye"
-    href="/agent-ready/visibility"
-  >
-    Show different content to humans and agents reading your docs.
-  </Card>
-  <Card
-    title="Contextual menu"
-    icon="bolt"
-    href="/agent-ready/contextual"
-  >
-    Give readers one-click access to Claude, ChatGPT, Cursor, and more.
-  </Card>
-  <Card
-    title="AI coding tools"
-    icon="wand-magic-sparkles"
-    href="/ai-tools/claude-code"
-  >
-    Set up Claude Code, Cursor, or Windsurf with Mintlify's skill.
-  </Card>
-</Columns>
-
-## Need inspiration?
-
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<AccordionGroup>
+  <Accordion title="Platform before package">
+    This documentation explains Backed as a platform first. Frontend, scripts, and CLI are treated as surfaces, not as the organizing taxonomy.
+  </Accordion>
+  <Accordion title="Onchain before interface">
+    Contracts are authoritative. If the product output and chain state diverge, the chain wins.
+  </Accordion>
+  <Accordion title="Operators are explicit">
+    Approval and other write actions are documented as controlled workflows, not hidden implementation details.
+  </Accordion>
+  <Accordion title="Environment clarity matters">
+    Testnet and mainnet are separate operational surfaces. Mixing them is treated as an error, not a minor inconvenience.
+  </Accordion>
+</AccordionGroup>

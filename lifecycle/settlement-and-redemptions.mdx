@@ -1,0 +1,45 @@
+---
+title: Settlement and Redemptions
+description: What happens after a sale closes and how participants should reason about claims, refunds, and redemption paths.
+icon: badge-dollar-sign
+---
+
+# Settlement and Redemptions
+
+## Sale close outcomes
+
+Once the commitment window has ended, the sale resolves based on contract state.
+
+The important question is not "what should happen" according to the interface. The important question is "what does the sale contract report right now."
+
+## Main post-close paths
+
+### Finalized sale
+
+If the sale finalizes successfully:
+
+- accepted capital is locked into the intended post-raise flow;
+- claim paths become available according to the sale contract;
+- ownership resolves through the vault share token.
+
+### Failed sale
+
+If the sale fails:
+
+- participants should expect refund paths instead of claims;
+- interfaces should reflect refundability, but the contract state remains authoritative.
+
+### End-of-term unwind
+
+The canonical operator path for treasury closeout is to unwind to the vault and finalize settlement. This is the cleanest operational path when treasury assets need to be returned into the redemption surface.
+
+## Practical guidance
+
+If you are investigating post-close behavior:
+
+- verify whether the sale is finalized;
+- verify whether it is marked failed;
+- verify commitment and accepted amounts;
+- verify whether claim or refund actions are currently enabled.
+
+Do not infer settlement status from marketing language, frontend labels, or stale cached output.
