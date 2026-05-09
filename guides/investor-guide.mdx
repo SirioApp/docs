@@ -14,22 +14,22 @@ It should also help the participant understand what they are actually evaluating
 
 ## What to verify before committing
 
-1. The environment: testnet or mainnet.
-2. The project identifier and project name.
-3. The collateral token: USDM.
-4. The current sale window and approval state.
-5. The soft cap, hard cap, and lockup assumptions.
-6. The current sale status according to the contract.
+1. The agent and its operating thesis.
+2. The launcher or launching entity behind the agent.
+3. The current approval and sale status.
+4. The soft cap, hard cap, accepted capital, and lockup assumptions.
+5. The current sale state according to the contracts.
+6. The practical meaning of Backed's review and approval.
 
 ## A sensible investor reading order
 
 In practice, the best order is:
 
-1. verify the environment,
-2. identify the project,
-3. confirm the project is approved,
+1. identify the agent,
+2. understand who stands behind it,
+3. confirm the raise is approved,
 4. confirm the sale is active,
-5. confirm the commitment asset, soft cap, hard cap, and lockup,
+5. understand the economic terms,
 6. only then decide whether to participate.
 
 ## How to think about an AAO as an investment object
@@ -46,7 +46,7 @@ That makes the evaluation more nuanced. The investor is not only asking whether 
 
 ## Commitment model
 
-Investors approve USDM and commit into the sale contract while the sale is active.
+Investors commit the platform's standard collateral asset into the sale contract while the sale is active.
 
 The core discipline is simple:
 
@@ -60,7 +60,6 @@ An investor is evaluating more than a narrative. In practice, the investor is ev
 
 - whether the project is actually approved,
 - whether the sale window is active,
-- whether the commitment asset and environment are correct,
 - whether the capital terms are acceptable,
 - what the post-close state will imply for claims or refunds.
 
@@ -73,17 +72,37 @@ For AAOs specifically, an investor is also evaluating the credibility of the org
 - Is there a clearly accountable launcher behind the agent?
 - Is the raise being presented with the right degree of humility about what is already autonomous and what is not?
 
+## What Backed approval should mean to an investor
+
+Backed's approval should be interpreted as a curation signal, not as a blanket guarantee.
+
+It means the raise has passed the platform's review and has been judged suitable for publication as a live launch.
+
+It does not mean:
+
+- that Backed guarantees the future conduct of the agent,
+- that Backed is assuming the launcher's legal obligations,
+- that economic performance is endorsed,
+- or that the raise is free from market, execution, or organizational risk.
+
 ## After the sale closes
 
 Depending on sale state, investors may see:
 
 - a finalized sale with claim paths,
 - a failed sale with refund paths,
-- later redemption behavior through the vault ownership surface.
+- later redemption behavior through the vault ownership surface after the 30-day lockup window.
 
 The important point is that these are not cosmetic differences. They affect what the participant can do next and what the committed capital now represents.
 
 That is especially important in an emerging category. If the nature of the organization is new, then the clarity of the post-close path matters even more.
+
+## Where to monitor the platform
+
+For readers who want external reference surfaces in addition to the application itself:
+
+- [DefiLlama](https://defillama.com/protocol/backed-aao) provides protocol-level visibility.
+- [Dune](https://dune.com/lucatropea/backed) provides analytics and onchain dashboards.
 
 ## Practical investor discipline
 
@@ -92,7 +111,7 @@ That is especially important in an emerging category. If the nature of the organ
     Verify the relevant sale state directly from the chain rather than inferring from labels, cached values, or screenshots.
   </Accordion>
   <Accordion title="If a raise looks live but feels inconsistent">
-    Check whether the project is actually approved and whether you are reading the correct environment.
+    Check whether the project is actually approved and whether the live contract state supports the presentation.
   </Accordion>
   <Accordion title="If settlement behavior seems delayed">
     Verify whether the sale is finalized, failed, or waiting on the relevant post-close workflow.

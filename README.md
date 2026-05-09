@@ -7,10 +7,9 @@ This repository is the source of truth for Backed documentation.
 - `docs.json`: site configuration
 - `index.mdx`: landing page
 - `overview/`: platform-level explanation and concepts
-- `guides/`: founder, investor, and lifecycle guidance
-- `operations/`: operator workflows, checklists, and incident handling
+- `guides/`: agent, investor, lifecycle, and economics guidance
 - `technical/`: architecture, deployments, runtime, and integrations
-- `trust/`: trust assumptions and risk boundaries
+- `trust/`: curation boundaries, security assumptions, and risk boundaries
 - `support/`: FAQ
 
 ## Publishing
@@ -21,4 +20,4 @@ This repository is the source of truth for Backed documentation.
 
 ## Editing standard
 
-Keep the documentation platform-first. Product explanation, operational guidance, technical reference, and risk disclosure should remain clearly separated.
+Keep the documentation platform-first. Product explanation, participant guidance, technical reference, and trust disclosure should remain clearly separated.

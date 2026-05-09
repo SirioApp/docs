@@ -6,16 +6,11 @@ icon: compass
 
 # Backed Documentation
 
-Backed is capital infrastructure for **Autonomous Agent Organizations** on MegaETH.
+Backed is a curated capital formation platform for **Autonomous Agent Organizations** on MegaETH.
 
-This documentation is organized around the platform itself rather than around internal repositories or implementation layers.
+It is designed to explain the platform the way a serious participant should read it: what an AAO is, what an agent launch means, how investors should interpret a raise, and where the real trust boundaries sit.
 
-It is written for four primary audiences:
-
-- agents and their launchers,
-- investors evaluating participation and settlement risk,
-- operators managing controlled workflows,
-- integrators building against the protocol surfaces.
+The public documentation is intentionally organized around the platform, not around internal tooling or repository structure.
 
 <Card
   title="Start here"
@@ -23,67 +18,72 @@ It is written for four primary audiences:
   href="/guides/getting-started"
   horizontal
 >
-  Begin here if you want the shortest path to the correct platform model and operating assumptions.
+  Begin here if you want the shortest path to the correct AAO model, participant structure, and raise assumptions.
 </Card>
+
+<Note>
+  Every launch on Backed is curated. Backed is not a permissionless listing venue. Approval means a launch has been reviewed and verified for publication on the platform, not that Backed underwrites the agent or assumes responsibility for its future conduct.
+</Note>
 
 ## Executive summary
 
-Backed is designed to make an emerging organizational form understandable at multiple levels at once.
+Backed exists to make an emerging organizational form legible enough to raise capital responsibly.
 
-At the product level, it should be clear what a participant is looking at, what stage a raise is in, and what actions are currently possible.
+At the center of the platform is the **AAO**, or **Autonomous Agent Organization**. An AAO is not simply a chatbot with a wallet, and it is not cleanly described by legacy categories alone. It sits somewhere between a company and a fund: it can hold capital, pursue a strategy, maintain a persistent identity, and evolve toward greater autonomy over time.
 
-At the operational level, it should be clear when a project merely exists, when it is actually approved for launch, and which workflows require controlled intervention.
+Backed gives that organizational form a disciplined launch surface. Each raise is tied to an agent identity, reviewed before going live, structured with explicit economic terms, and settled according to contract-defined outcomes.
 
-At the protocol level, it should be clear which contracts define the current state of the raise and which interfaces merely expose or act on that state.
-
-At the category level, it should be clear what an AAO is meant to be: not exactly a traditional company, not exactly a traditional hedge fund, but a new organizational form that currently sits somewhere between those categories.
+The result is a platform where an agent can be presented to the market in a cleaner, more professional, and more interpretable way than a generic token page or an informal offchain process would allow.
 
 ## The central idea
 
-Backed is based on the view that future companies may increasingly look like autonomous agents that collaborate with one another, hold capital, execute specialized roles, and operate across shared rails.
+Backed is built on the belief that many future companies will look more like networks of autonomous agents than like static legal shells with software attached.
 
-We are not claiming that this future has already fully arrived.
+That future is not complete today. The current generation of agent-led organizations still depends on human launchers, explicit review, legal accountability, and carefully defined economic rules.
 
-The current platform should be understood as both:
+For that reason, Backed should be understood as both:
 
-- a real operating system for launching and funding agent-linked organizations today, and
-- a disciplined research process for discovering how credible AAOs should be formed, launched, funded, and interpreted.
+- a real platform for launching and funding agent-led organizations today, and
+- a disciplined research process into how credible AAOs should be formed, presented, funded, and governed.
 
 ## At a glance
 
 | Topic | Current model |
 | --- | --- |
 | Organizational thesis | Autonomous Agent Organizations |
-| Network family | MegaETH |
-| Active environments | Testnet and Mainnet |
-| Commitment asset | USDM |
+| Launch model | Curated and reviewed by Backed |
+| Listing model | Not permissionless |
+| Standard collateral | USDM |
+| Core network | MegaETH |
 | Identity dependency | ERC8004 Identity Registry |
-| Launch gate | Explicit project approval |
+| Approval model | Explicit platform approval before launch |
+| Lockup model | 30-day lockup |
 | Source of truth | Deployed contracts |
 
 ## What this documentation is for
 
-This documentation is intended to help a reader answer four practical questions without ambiguity:
+This documentation is intended to answer five practical questions without ambiguity:
 
 1. What exactly is Backed and how should an AAO be understood?
-2. What should a founder, investor, or operator do at each stage of a raise?
-3. Which technical surfaces define state, permissions, and settlement?
-4. Where are the real trust and operational risks?
+2. What is the difference between the agent, the launcher behind it, and the investor evaluating it?
+3. How do soft cap, hard cap, accepted capital, refunds, and lockup actually work?
+4. What does Backed verify before a launch becomes visible on the platform?
+5. Where do platform review and platform responsibility stop?
 
 ## Read by audience
 
 <Columns cols={2}>
   <Card title="Agents" icon="bot" href="/guides/agent-guide">
-    How an agent is launched, who stands behind it, and what accountability follows.
+    How an agent is launched, who stands behind it, and what accountability remains with the launcher.
   </Card>
   <Card title="Investors" icon="hand-coins" href="/guides/investor-guide">
     How to evaluate a raise, commit capital, and interpret post-close outcomes.
   </Card>
-  <Card title="Operators" icon="shield-check" href="/operations/operator-model">
-    Controlled workflows, verification discipline, and incident-oriented runbooks.
+  <Card title="Technical Readers" icon="blocks" href="/technical/architecture">
+    Contract architecture, deployments, runtime surfaces, and integration guidance.
   </Card>
-  <Card title="Integrators" icon="plug" href="/technical/integration-patterns">
-    Deployment-aware integration patterns, contract reads, and write confirmation workflows.
+  <Card title="Trust and Disclosures" icon="shield" href="/trust/curation-and-disclaimers">
+    What approval means, what is reviewed, and where Backed does not assume liability.
   </Card>
 </Columns>
 
@@ -91,7 +91,7 @@ This documentation is intended to help a reader answer four practical questions 
 
 <CardGroup cols={3}>
   <Card title="Platform overview" icon="layout-dashboard" href="/overview/what-is-backed">
-    What Backed is, the problem it solves, and the operating model behind the product.
+    What Backed is, why it exists, and what kind of platform it is intended to become.
   </Card>
   <Card title="The AAO model" icon="brain-circuit" href="/overview/aao-model">
     What an Autonomous Agent Organization is and why the category matters.
@@ -99,46 +99,66 @@ This documentation is intended to help a reader answer four practical questions 
   <Card title="Platform thesis" icon="lightbulb" href="/overview/platform-thesis">
     Why Backed is both infrastructure and an experiment in future organizational form.
   </Card>
+  <Card title="Participants and accountability" icon="users" href="/overview/roles-and-responsibilities">
+    How the agent, launcher, investor, Backed, and contracts each carry distinct responsibilities.
+  </Card>
   <Card title="Raise lifecycle" icon="route-highway" href="/guides/raise-lifecycle">
-    The full sequence from identity prerequisite through settlement and redemption.
+    The full sequence from identity and review through settlement, refund paths, and lockup.
   </Card>
   <Card title="Raise economics" icon="chart-column" href="/guides/raise-economics">
     Soft cap, hard cap, lockup, accepted capital, and refund logic.
-  </Card>
-  <Card title="Operational controls" icon="list-checks" href="/operations/checklists">
-    Pre-flight and verification checklists for creation, approval, launch, and incident response.
   </Card>
   <Card title="Technical architecture" icon="blocks" href="/technical/architecture">
     Contract layers, runtime responsibilities, and the boundaries that shape protocol behavior.
   </Card>
   <Card title="Deployment reference" icon="server" href="/technical/deployments">
-    Environment-specific chain IDs, RPC endpoints, and active contract addresses.
+    Chain IDs, RPC endpoints, and active contract addresses for technical readers.
   </Card>
   <Card title="Risk and trust" icon="lock" href="/trust/security-model">
-    Security assumptions, operator risk, and the practical boundaries users should understand.
+    Security assumptions, launch review boundaries, and the practical limits users should understand.
   </Card>
 </CardGroup>
 
-## How to use this documentation
+## What makes Backed distinct
 
-If you are new to the platform, start with the introduction pages and read the lifecycle before going into operations or technical reference.
+<CardGroup cols={2}>
+  <Card title="Agent-first presentation" icon="bot">
+    The market-facing object is the agent, not a generic fundraiser profile. The launcher remains accountable behind it.
+  </Card>
+  <Card title="Curated launch model" icon="badge-check">
+    Launches are reviewed and approved before they are presented as live. Backed is intentionally not permissionless.
+  </Card>
+  <Card title="Defined economic structure" icon="scale">
+    Each raise has explicit minimum and maximum funding logic, a standard collateral asset, and a 30-day lockup model.
+  </Card>
+  <Card title="Observable state" icon="blocks">
+    Approval, commitments, finalization, claims, refunds, and ownership outcomes resolve through deployed contracts.
+  </Card>
+</CardGroup>
 
-If you want to understand the idea behind the product rather than only the workflow, read **What Is Backed**, **The AAO Model**, and **Platform Thesis** before moving into participant or operational guidance.
+## Independent reference surfaces
 
-If you are evaluating whether a raise is investable, the **Agent Guide**, **Investor Guide**, and **Raise Economics** pages are more useful than the tooling pages.
+<CardGroup cols={2}>
+  <Card title="DefiLlama" icon="chart-line" href="https://defillama.com/protocol/backed-aao">
+    Public protocol overview and ecosystem-level visibility for Backed.
+  </Card>
+  <Card title="Dune" icon="chart-column" href="https://dune.com/lucatropea/backed">
+    Analytics and onchain dashboards for monitoring platform activity.
+  </Card>
+</CardGroup>
 
-If you are responsible for approvals, launch control, or incident handling, read the operations section before relying on the application surface alone.
+## Recommended reading order
 
-If you are integrating with Backed programmatically, use the technical section as your working reference and treat the participant guides as context for expected behavior.
+If you are new to the platform, start with **What Is Backed**, **The AAO Model**, and **How Backed Works**.
+
+If you are preparing a launch, continue with **Agent Guide**, **Raise Lifecycle**, and **Raise Economics**.
+
+If you are evaluating participation, read **Investor Guide**, **Raise Economics**, and **Curation and Disclaimers** before committing capital.
+
+If you are integrating programmatically or validating contract behavior, use the **Technical** section as the canonical reference.
 
 ## Reading principle
 
-Backed separates product explanation, operational guidance, technical reference, and risk disclosure on purpose.
+Backed separates platform narrative, participant guidance, economic rules, technical reference, and trust disclosures on purpose.
 
-That separation matters because:
-
-- the category itself is still emerging,
-- a project can exist before it is approved,
-- a surface can be usable without being authoritative,
-- an investor flow can be intuitive while still depending on contract-defined settlement,
-- an operator workflow can be simple while still carrying high consequence.
+That separation matters because the category is early, the launch process is curated, the economics are specific, and contract state ultimately decides the financial outcome.

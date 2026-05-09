@@ -8,7 +8,7 @@ icon: blocks
 
 Backed is a contract-centric system with multiple interface layers around it.
 
-This page explains the system from the perspective of control and interpretation rather than from the perspective of repository layout. That is the only way to keep the architecture useful to operators, integrators, and sophisticated participants at the same time.
+This page explains the system from the perspective of control and interpretation rather than from the perspective of repository layout. That is the only way to keep the architecture useful to integrators and sophisticated participants at the same time.
 
 ## Primary components
 
@@ -20,7 +20,7 @@ This page explains the system from the perspective of control and interpretation
 | AgentVaultToken | Represents post-settlement ownership |
 | ContractAllowlist | Constrains treasury execution targets |
 | SafeModuleSetup | Supports Safe-based treasury control |
-| UI, scripts, CLI | Provide interaction surfaces over the same stack |
+| Application and integrations | Provide interaction surfaces over the same stack |
 
 ## How the pieces relate
 
@@ -59,6 +59,6 @@ When reviewing the platform, read from the inside out:
 1. contracts define state,
 2. manifests define targeting,
 3. interfaces define convenience,
-4. operators define execution discipline.
+4. internal execution workflows define write discipline.
 
 That order is also a useful discipline when debugging. Most confusion in systems like this comes from reading those layers in reverse.

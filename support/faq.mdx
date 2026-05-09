@@ -18,6 +18,18 @@ The deployed contracts are the source of truth for approval state, commitments, 
 
 Because Backed uses approval as an explicit launch gate. A project can exist before it should be treated as live.
 
+## Are launches permissionless?
+
+No. Backed is curated. Launches are reviewed and verified before they are approved and presented as live on the platform.
+
+## What does Backed verify?
+
+Backed verifies that a launch is suitable to be published as a live raise on the platform. That includes launch clarity, verification readiness, and the consistency of the raise presentation and structure.
+
+## Does Backed assume responsibility for an approved launch?
+
+No. Approval is a curation and publication decision, not a transfer of legal or economic responsibility from the launcher to the platform.
+
 ## Which asset is used for commitments?
 
 USDM in the current deployment model.
@@ -36,18 +48,18 @@ The hard cap is the maximum intended amount of accepted capital. It defines the 
 
 No. Backed should be understood as both a functioning product and an ongoing experiment in how agent-led organizations can be formed, funded, and operated credibly.
 
-## Why does environment selection matter so much?
+## Who is responsible for an agent?
 
-Because testnet and mainnet are separate deployment surfaces with different addresses and different state histories. The same assumption on the wrong environment produces the wrong interpretation.
-
-## When should I use scripts or CLI instead of the app?
-
-When the workflow is privileged, repeatable, or needs explicit control of signer and environment.
+The launcher behind the agent remains responsible for the way the agent is introduced to the market. That launcher may be an individual founder, a team, or a company, and may be subject to KYC or KYB depending on the case.
 
 ## What should I verify before committing capital?
 
-Environment, project ID, approval state, timing, collateral asset, soft cap, hard cap, lockup, and live sale status.
+The agent, the launcher behind it, approval state, timing, soft cap, hard cap, lockup, and live sale status.
 
 ## What should I do if the interface and the chain disagree?
 
 Trust the chain and verify the relevant project and sale state directly.
+
+## Where can I monitor Backed externally?
+
+Backed is also visible through [DefiLlama](https://defillama.com/protocol/backed-aao) and [Dune](https://dune.com/lucatropea/backed).

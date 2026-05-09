@@ -1,14 +1,14 @@
 ---
-title: Roles and Responsibilities
-description: The responsibilities of agents, launchers, investors, operators, and the contract layer itself.
+title: Participants and Accountability
+description: The responsibilities of the agent, the launcher behind it, the investor, Backed, and the contract layer itself.
 icon: users
 ---
 
-# Roles and Responsibilities
+# Participants and Accountability
 
 Backed is intentionally explicit about who is responsible for what.
 
-The platform works best when accountability changes hands cleanly from one stage to the next. Launchers should not implicitly inherit operator responsibilities. Investors should not be expected to infer hidden launch state. Operators should not rely on ambiguity where explicit verification is required.
+The platform works best when accountability changes hands cleanly from one stage to the next. Investors should not have to infer hidden launch state. Launchers should not hide behind vague language about autonomy. Backed should not be mistaken for the legal owner of the launcher's obligations.
 
 ## Agents
 
@@ -35,10 +35,13 @@ That launcher may be:
 
 The launcher is responsible for the legitimacy, framing, and launch quality of the agent. Where relevant, the launcher is also the party expected to undergo KYC or KYB and to bear legal responsibility for what is introduced to the market.
 
-In practical terms, this is the clearest way to distinguish launcher and operator:
+In practical terms, the launcher is responsible for:
 
-- the launcher is responsible for the agent’s identity, narrative, compliance path, and legal accountability;
-- the operator is responsible for controlled protocol actions such as approval and sensitive execution discipline.
+- the identity and public framing of the agent,
+- the truthfulness of the claims made about the agent,
+- the coherence of the raise configuration,
+- the relevant KYC or KYB path,
+- and the legal accountability attached to the launch.
 
 ## Investors
 
@@ -46,26 +49,30 @@ Investors commit capital into the sale contract and should evaluate the raise us
 
 They should:
 
-- verify testnet versus mainnet,
-- confirm the project identifier,
-- confirm the collateral token is USDM,
-- verify live sale timing, soft cap, hard cap, and lockup assumptions before committing.
+- understand what the agent claims to do,
+- identify the launcher or launching entity behind it,
+- verify that the raise is approved and live,
+- understand soft cap, hard cap, accepted capital, refund logic, and the 30-day lockup before committing.
 
 Investors are not expected to operate the system, but they are expected to distinguish between visibility, approval, activity, economics, and settlement.
 
-## Operators
+## Backed
 
-Operators handle privileged workflows and therefore own the highest operational risk.
+Backed is the platform, the curator, and the approval boundary.
 
-They should:
+Backed is responsible for:
 
-- project approval,
-- environment correctness,
-- signer correctness,
-- allowlist and treasury boundaries,
-- state verification when interfaces disagree.
+- reviewing launches before they are presented as live,
+- verifying that the platform's publication and approval standards have been met,
+- maintaining the application and contract surfaces that expose raise state,
+- and keeping the distinction between creation, approval, participation, and settlement clear.
 
-Operators are the layer that converts protocol capability into disciplined execution. If a launch is presented as live, an approval exists. If a state discrepancy is investigated, the relevant contract reads should support the conclusion.
+Backed is **not** responsible for:
+
+- the truth of every future outcome claimed or implied by the launcher,
+- the strategic success of the agent,
+- the legal obligations that remain with the launcher or launching entity,
+- or the market performance of a raise after it has been approved.
 
 ## Contracts
 
@@ -85,8 +92,8 @@ This role is not metaphorical. It is the reason why the system can expose a clea
 | Identity creation | Launcher or identity workflow owner |
 | Public framing of the agent | Launcher |
 | KYC or KYB completion | Launcher or launching entity |
-| Project creation | Launcher or delegated operator |
-| Approval | Authorized operator |
+| Project creation | Launcher or delegated platform workflow |
+| Approval | Backed |
 | Capital commitment | Investor |
-| Treasury execution policy | Authorized operator |
+| Platform publication of a live raise | Backed |
 | Dispute resolution over current state | Deployed contracts |

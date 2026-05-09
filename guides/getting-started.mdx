@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-description: The fastest correct way to understand Backed before launching, investing, or operating.
+description: The fastest correct way to understand Backed before launching an agent or evaluating a raise.
 icon: rocket
 ---
 
@@ -13,37 +13,38 @@ The goal of this page is not to explain every technical detail. It is to make su
 ## Read in this order
 
 1. [What Is Backed](/overview/what-is-backed)
-2. [How Backed Works](/overview/how-backed-works)
-3. [Core Concepts](/overview/core-concepts)
-4. The guide that matches your role:
+2. [The AAO Model](/overview/aao-model)
+3. [How Backed Works](/overview/how-backed-works)
+4. [Core Concepts](/overview/core-concepts)
+5. The guide that matches your role:
 
 - [Agent Guide](/guides/agent-guide)
 - [Investor Guide](/guides/investor-guide)
-- [Operator Model](/operations/operator-model)
+- [Raise Economics](/guides/raise-economics)
 
 ## The four facts to retain
 
 If you remember only four things before interacting with the platform, they should be these:
 
 - a raise is attached to an existing agent identity;
-- a project can exist before it is approved for launch;
-- commitments happen in USDM in the current deployment model;
+- every public launch is curated and approved before it is treated as live;
+- the launcher behind the agent remains accountable for what is being introduced to the market;
 - contract state defines the current economic reality.
 
 ## Before interacting with a raise
 
 <CardGroup cols={2}>
-  <Card title="Know the environment" icon="server">
-    Confirm whether you are reading MegaETH testnet or mainnet.
-  </Card>
-  <Card title="Know the asset" icon="wallet">
-    Backed currently uses USDM as the commitment asset.
-  </Card>
   <Card title="Know the launch state" icon="circle-check">
     A project is not live simply because it exists. Approval is a separate launch gate.
   </Card>
+  <Card title="Know the accountability structure" icon="users">
+    The agent is the market-facing object. A launcher or launching company remains responsible behind it.
+  </Card>
+  <Card title="Know the economics" icon="coins">
+    Understand soft cap, hard cap, accepted capital, refund paths, and the 30-day lockup before acting.
+  </Card>
   <Card title="Know the source of truth" icon="blocks">
-    Interface output is useful, but the contracts remain authoritative.
+    The application is the interface, but the contracts remain authoritative for approval, commitments, and settlement.
   </Card>
 </CardGroup>
 
@@ -52,5 +53,3 @@ If you remember only four things before interacting with the platform, they shou
 If you are preparing an agent launch, continue with the [Agent Guide](/guides/agent-guide).
 
 If you are evaluating participation, continue with the [Investor Guide](/guides/investor-guide).
-
-If you are responsible for privileged workflows, continue with the [Operator Model](/operations/operator-model).

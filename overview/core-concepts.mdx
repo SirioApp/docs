@@ -26,6 +26,12 @@ We do not use the term to suggest that the category is already fully mature. We 
 
 Every raise in Backed is attached to an existing agent identity from the ERC8004 Identity Registry. Identity is therefore a prerequisite, not a downstream artifact of project creation.
 
+## Launcher
+
+The **launcher** is the individual, team, or company responsible for bringing the agent to market through Backed.
+
+The agent is the market-facing object. The launcher is the accountable party behind it. Where required, the launcher is also the subject of KYC or KYB and remains responsible for the way the agent is described and introduced to the market.
+
 ## Project
 
 A project is the factory-level record created for a raise. It contains the metadata and references to the sale, treasury, executor, and collateral configuration that define the raise surface.
@@ -34,9 +40,15 @@ A project is therefore the main unit a reader tracks across the lifecycle. It is
 
 ## Approval
 
-Approval is a distinct operator action that determines whether a project should be treated as launched. Creation alone is not enough.
+Approval is the distinct platform action that determines whether a project should be treated as launched. Creation alone is not enough.
 
 This is one of the most important concepts in the system. Without it, a reader will collapse project existence and public launch into the same event and will misread the state of the platform.
+
+## Curated launch
+
+A **curated launch** is a launch that has been reviewed and verified by Backed before it is made visible as a live raise.
+
+This is not equivalent to a guarantee. It means the platform has applied its launch controls and publication standards. It does not mean the platform assumes the launcher's obligations or the future performance of the agent.
 
 ## Sale state
 
@@ -44,30 +56,30 @@ The sale contract defines the live status of commitments, accepted capital, fina
 
 When evaluating economic outcomes, sale state matters more than interface phrasing. It determines what capital has been committed, whether the sale has resolved, and what paths are available to participants.
 
+## Soft cap and hard cap
+
+The **soft cap** is the minimum level of accepted capital required for the raise to succeed. If the raise resolves below that threshold, participants receive refunds.
+
+The **hard cap** is the maximum amount of capital the raise is intended to accept. Together, these values define the funding corridor of the raise.
+
+## Lockup
+
+Backed currently uses a **30-day lockup** model for AAO raises.
+
+The lockup matters because it frames the raise as committed capital for an operating thesis rather than as instant in-and-out liquidity.
+
 ## Share token
 
 Post-raise ownership resolves through the vault share token rather than through offchain records or interface labels.
 
 This matters because Backed is not merely documenting an event. It is documenting a transition from fundraising into a post-close ownership surface.
 
-## Environment
-
-Backed runs against explicit manifests for MegaETH testnet and mainnet. Environment choice changes:
-
-- contract addresses,
-- RPC endpoints,
-- chain IDs,
-- identity registry addresses,
-- collateral addresses.
-
-Environment is not background configuration. It is a first-order part of how the platform should be interpreted. The same project identifier on the wrong environment is not a near miss. It is the wrong object.
-
 ## Source of truth
 
 The source of truth for lifecycle state is the deployed contract system.
 
-That does not mean the application, scripts, and CLI are unimportant. It means they should be interpreted as surfaces over the underlying state rather than as owners of it.
+That does not mean the application is unimportant. It means it should be interpreted as a surface over the underlying state rather than as the owner of it.
 
 <Warning>
-  If you do not know which environment you are reading or writing against, you do not yet know what state you are looking at.
+  Platform copy can help you interpret a raise, but it does not replace contract-defined approval, settlement, refund, and ownership state.
 </Warning>

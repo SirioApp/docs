@@ -12,7 +12,7 @@ These terms should be understood before a participant commits capital and before
 
 ## Commitment asset
 
-Backed currently uses **USDM** as the commitment asset in the active deployment model.
+Backed currently uses **USDM** as the standard commitment asset.
 
 Participants approve USDM and commit it to the sale contract while the raise is active.
 
@@ -42,6 +42,12 @@ Practically, the hard cap answers a different question:
 
 > What is the maximum amount of capital this raise should accept?
 
+## Accepted capital
+
+Accepted capital is the amount that the raise ultimately recognizes as part of the successful funding outcome.
+
+This concept matters because the amount participants commit and the amount the raise finally accepts are not always identical in every outcome.
+
 ## Soft cap and hard cap together
 
 The two values serve different purposes:
@@ -59,6 +65,14 @@ In the standard participant reading model:
 
 - the soft cap matters for success or failure,
 - the hard cap matters for sizing and upper-bound interpretation.
+
+## If the raise closes below soft cap
+
+If the raise is finalized below the soft cap:
+
+- the raise is treated as unsuccessful,
+- accepted capital does not resolve into a successful funding outcome,
+- and participants should expect a full refund path rather than a claim path.
 
 ## What happens above the hard cap
 
@@ -104,6 +118,18 @@ In Backed, soft cap, hard cap, and lockup are part of how an AAO becomes credibl
 - the upper bound for participation,
 - and the time horizon within which capital is expected to remain committed to the operating thesis.
 
+## How to read the economics professionally
+
+The economics of a Backed raise are meant to communicate seriousness, not novelty.
+
+A credible raise should let an investor answer these questions quickly:
+
+- What is the minimum capital required for this launch to make sense?
+- What is the maximum size this raise is designed to absorb?
+- What happens if the market commits less than the minimum?
+- What happens if the market commits more than the intended maximum?
+- How long is capital expected to remain locked after success?
+
 ## What investors should verify
 
 Before committing, an investor should verify:
@@ -122,4 +148,5 @@ Before promoting a raise, the launcher behind the agent should be able to explai
 - why the soft cap is set where it is,
 - why the hard cap is set where it is,
 - why the lockup is necessary,
+- how accepted capital should be understood if the raise is oversubscribed,
 - and what post-close outcomes participants should expect if the raise succeeds or fails.

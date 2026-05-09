@@ -13,12 +13,13 @@ Every Backed raise moves through a predictable sequence.
 | Stage | Description |
 | --- | --- |
 | Identity | An ERC8004 agent identity already exists |
-| Configuration | The project’s economic and metadata assumptions are prepared |
+| Preparation | The launcher's economic, legal, and messaging assumptions are prepared |
 | Creation | The factory creates the project and related addresses |
-| Approval | An authorized operator approves the project |
-| Commitment | Participants commit USDM during the sale window |
-| Resolution | The sale finalizes or fails |
-| Lockup and post-close | Claims, refunds, lockup, and redemptions are governed according to state |
+| Review | Backed verifies the launch for publication |
+| Approval | The project is approved and can be treated as live |
+| Commitment | Participants commit capital during the sale window |
+| Resolution | The sale finalizes successfully or fails below the minimum threshold |
+| Lockup and post-close | Claims, refunds, lockup, and later redemptions are governed according to state |
 
 ## Stage-by-stage interpretation
 
@@ -26,31 +27,42 @@ Every Backed raise moves through a predictable sequence.
 
 Before anything else, the relevant agent identity already exists. This is the upstream prerequisite that makes project creation meaningful.
 
-### Configuration
+### Preparation
 
-At this stage, the economic and messaging assumptions of the raise are defined. If the configuration is still unstable, the raise is not yet ready for creation.
+At this stage, the economic terms, public description, and launch accountability are defined. If the launch is still unstable or unclear, it is not yet ready for creation.
 
 ### Creation
 
 Creation establishes the project onchain. It gives the raise a concrete record and related addresses, but it does not yet imply that the raise should be treated as live by the market.
 
+### Review
+
+Before a launch is presented publicly, Backed reviews it for publication. This is the curation boundary of the platform.
+
+The point of this stage is not to claim responsibility for the agent. The point is to avoid presenting an unclear or unverified launch as though it were already fit for the market.
+
 ### Approval
 
-Approval changes the meaning of the project. The raise is no longer merely created; it is now approved for launch according to the operator model of the platform.
+Approval changes the meaning of the project. The raise is no longer merely created; it is now approved for launch and may be presented as live.
 
 ### Commitment
 
-This is the stage at which the raise becomes economically active for participants. USDM commitments matter here, and the live sale window becomes central.
+This is the stage at which the raise becomes economically active for participants. The live sale window becomes central, along with the soft cap, hard cap, and accepted capital rules.
 
 ### Resolution, lockup, and post-close
 
-After the sale window, the relevant questions shift. The focus is no longer “can capital be committed?” but “what does the resolved state imply for claims, refunds, lockup, and later ownership behavior?”
+After the sale window, the relevant questions shift. The focus is no longer "can capital be committed?" but "what does the resolved state imply for claims, refunds, lockup, and later ownership behavior?"
+
+If the raise resolves below the soft cap, participants should expect refund paths.
+
+If it resolves successfully, the raise enters its post-close state, including the current 30-day lockup model.
 
 ## The distinction that matters most
 
 Backed separates:
 
 - project existence,
+- project review,
 - project launch,
 - project funding,
 - project settlement.
@@ -59,4 +71,4 @@ That separation is intentional. It lowers ambiguity and makes responsibility exp
 
 ## Operating rule
 
-Do not use “launch” as a catch-all term. In Backed, creation and approval are different events with different implications for founders, investors, and operators.
+Do not use "launch" as a catch-all term. In Backed, creation, review, and approval are different events with different implications for the launcher, the investor, and the platform.

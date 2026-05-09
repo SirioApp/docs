@@ -27,4 +27,4 @@ Thank you for helping improve the Backed documentation. This guide defines the e
 - **Use consistent terminology**: Don't alternate between synonyms for the same concept
 - **Include examples**: Show, don't just tell
 - **Separate product and protocol**: Distinguish clearly between interface behavior and contract-defined state
-- **Write for decision-making**: Help founders, investors, and operators understand what matters before they act
+- **Write for decision-making**: Help launchers, investors, and technical readers understand what matters before they act

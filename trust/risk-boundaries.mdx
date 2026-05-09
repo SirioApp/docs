@@ -1,28 +1,30 @@
 ---
 title: Risk Boundaries
-description: Operational and interpretive risks that founders, investors, and operators should keep in mind.
+description: The risks that agents, launchers, and investors should keep in mind when reading a Backed raise.
 icon: triangle-alert
 ---
 
 # Risk Boundaries
 
-The largest practical risks in Backed are usually not theoretical. They are operational.
+The largest practical risks in Backed are usually not abstract. They are interpretive, organizational, and economic.
 
-This page exists to make those risks legible before they become incidents. Most of them do not originate from deep protocol mechanics. They come from incorrect interpretation, rushed launch behavior, or uncontrolled environment assumptions.
+This page exists to make those risks legible before they are misunderstood as simple interface concerns. Most of them do not originate from deep protocol mechanics alone. They come from incorrect interpretation, rushed launch behavior, overstated autonomy, or weak accountability.
 
 ## Primary risks
 
 | Risk | Description |
 | --- | --- |
-| Wrong environment | Reads or writes target the wrong chain and wrong contracts |
-| Premature launch assumptions | A project exists but is not yet approved |
-| Collateral confusion | Participants misunderstand the active commitment asset |
-| Signer misuse | A privileged key is used incorrectly or against the wrong target |
-| Interface-state mismatch | A surface shows stale or incomplete information |
+| Premature launch assumptions | A project exists or is visible, but has not been approved as a live raise |
+| Autonomy overstatement | The agent is described as more autonomous than it actually is |
+| Launcher opacity | The responsible founder or company behind the agent is unclear |
+| Economics misread | Investors misunderstand soft cap, hard cap, refunds, or the 30-day lockup |
+| Interface-state mismatch | A surface shows stale or incomplete information relative to contract state |
+| Category risk | AAOs are still an emerging organizational form and should be read with appropriate caution |
 
 ## How to reduce these risks
 
-- verify onchain before acting in high-stakes cases,
-- make environment choice explicit,
-- separate creation from launch mentally and operationally,
-- use scripts or CLI when repeatability and verification matter.
+- separate creation, review, approval, and settlement in your own reading of the raise,
+- ask whether the launch description is precise about what is already autonomous and what is not,
+- verify that a real launcher or launching entity stands behind the agent,
+- read the economic terms before treating a raise as investable,
+- trust contract-defined state over screenshots, cached interfaces, or second-hand summaries.

@@ -40,7 +40,7 @@
   "footer": {
     "links": [
       {
-        "header": "Overview",
+        "header": "Platform",
         "items": [
           {
             "label": "What Is Backed",
@@ -61,15 +61,32 @@
         ]
       },
       {
-        "header": "Operations",
+        "header": "Trust",
         "items": [
           {
-            "label": "Operator Model",
-            "href": "/operations/operator-model"
+            "label": "Security Model",
+            "href": "/trust/security-model"
           },
           {
-            "label": "Scripts and CLI",
-            "href": "/operations/scripts-and-cli"
+            "label": "Curation and Disclaimers",
+            "href": "/trust/curation-and-disclaimers"
+          },
+          {
+            "label": "FAQ",
+            "href": "/support/faq"
+          }
+        ]
+      },
+      {
+        "header": "Data",
+        "items": [
+          {
+            "label": "DefiLlama",
+            "href": "https://defillama.com/protocol/backed-aao"
+          },
+          {
+            "label": "Dune Dashboard",
+            "href": "https://dune.com/lucatropea/backed"
           }
         ]
       }
@@ -114,20 +131,6 @@
         ]
       },
       {
-        "tab": "Operations",
-        "groups": [
-          {
-            "group": "Runbooks and Controls",
-            "pages": [
-              "operations/operator-model",
-              "operations/checklists",
-              "operations/scripts-and-cli",
-              "operations/verification-and-incidents"
-            ]
-          }
-        ]
-      },
-      {
         "tab": "Technical",
         "groups": [
           {
@@ -146,9 +149,10 @@
         "tab": "Trust",
         "groups": [
           {
-            "group": "Risk, Security, and Support",
+            "group": "Risk, Curation, and Support",
             "pages": [
               "trust/security-model",
+              "trust/curation-and-disclaimers",
               "trust/risk-boundaries",
               "support/faq"
             ]
@@ -162,6 +166,16 @@
           "anchor": "MegaETH",
           "href": "https://www.megaeth.com",
           "icon": "globe"
+        },
+        {
+          "anchor": "DefiLlama",
+          "href": "https://defillama.com/protocol/backed-aao",
+          "icon": "chart-line"
+        },
+        {
+          "anchor": "Dune",
+          "href": "https://dune.com/lucatropea/backed",
+          "icon": "chart-column"
         }
       ]
     }

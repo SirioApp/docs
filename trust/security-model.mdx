@@ -1,19 +1,19 @@
 ---
 title: Security Model
-description: Security and trust assumptions behind Backed for users, operators, and integrators.
+description: Security and trust assumptions behind Backed for agents, investors, and technical integrators.
 icon: lock
 ---
 
 # Security Model
 
-Backed is contract-first, but not trustless in the simplistic sense.
+Backed is contract-first, but it is not "trustless" in the simplistic marketing sense.
 
 Its safety depends on both:
 
 - the integrity of the deployed contracts,
-- the discipline of operator workflows.
+- the discipline of the platform's review and approval controls.
 
-This distinction matters because the platform does not claim that every important decision is automatically safe just because it is exposed onchain. Certain decisions remain operational by nature, and the documentation should make those boundaries visible.
+This distinction matters because the platform does not claim that every important decision becomes safe merely because it touches the chain. Certain decisions remain procedural by nature, and the documentation should make those boundaries visible.
 
 That honesty matters even more because Backed is exploring the AAO category rather than presenting it as a fully solved problem. The platform should be trusted to the extent that its state boundaries, operational controls, and disclosure standards are credible, not because the category is already complete.
 
@@ -22,21 +22,33 @@ That honesty matters even more because Backed is exploring the AAO category rath
 | Boundary | What it protects |
 | --- | --- |
 | Onchain state boundary | Approval, commitments, settlement, claims, refunds |
-| Operator boundary | Privileged actions such as approval and explicit writes |
+| Review boundary | Separation between created launches and approved public launches |
+| Accountability boundary | Separation between platform review and launcher responsibility |
 | Treasury boundary | Restriction of treasury-controlled execution paths |
-| Environment boundary | Separation of testnet and mainnet targeting |
 
 ## Practical trust assumptions
 
 Users should assume:
 
 - the contracts define the current truth,
-- the manifests correctly resolve the intended contracts,
-- operators are using the right signer on the right environment,
-- collateral assumptions are correctly configured.
+- Backed's approval means the launch has been reviewed for publication,
+- the launcher remains responsible for the claims and legal perimeter of the agent,
+- collateral and economic assumptions are correctly configured in the live contracts.
+
+## What curation does and does not provide
+
+Curation improves legibility. It can reduce obvious ambiguity, force clearer launches, and help keep the platform readable for investors.
+
+What it does not provide is a blanket guarantee.
+
+Backed's approval should not be read as:
+
+- a promise of future performance,
+- a transfer of legal responsibility from launcher to platform,
+- or an assertion that an emerging AAO carries no execution or market risk.
 
 ## What this means in practice
 
-Backed reduces ambiguity by moving critical lifecycle decisions onchain, but it does not remove the need for disciplined operations. Approval, environment selection, and privileged writes remain meaningful trust surfaces.
+Backed reduces ambiguity by moving critical lifecycle decisions onchain and by curating which launches are presented publicly, but it does not remove the need for disciplined reading by participants.
 
-In short: Backed should be read as a serious operating system for an emerging category, not as proof that the category is already frictionless or fully autonomous.
+In short: Backed should be read as a serious platform for an emerging category, not as proof that the category is already frictionless, fully autonomous, or risk-free.

@@ -8,22 +8,21 @@ icon: flag
 
 Backed is capital formation infrastructure for **Autonomous Agent Organizations** on MegaETH.
 
-It provides a structured path to:
+It provides a structured way to:
 
 - link a raise to an existing agent identity,
-- create the project onchain,
-- explicitly approve the project for launch,
-- accept capital commitments in USDM,
+- review and approve the project before it is launched publicly,
+- accept capital commitments under explicit economic terms,
 - settle the raise according to contract-defined outcomes,
-- manage claims, refunds, and post-close ownership flows.
+- manage claims, refunds, lockup, and post-close ownership flows.
 
 ## The product in practical terms
 
-Backed sits between a simple listing interface and a purely manual onchain process.
+Backed sits between a generic listing venue and a purely manual onchain process.
 
-It does not reduce the raise to a static campaign page, and it does not force users to reason from raw contract interactions alone. Instead, it gives the raise a clear product surface while preserving explicit operational controls and a contract-defined lifecycle underneath.
+It does not reduce the raise to a campaign page, and it does not force serious participants to reason from raw contract interactions alone. Instead, it gives the raise a cleaner product surface while preserving explicit approval boundaries and contract-defined settlement underneath.
 
-That is the core proposition of the platform: a raise should be understandable to the market, manageable by operators, and auditable from onchain state.
+That is the core proposition of the platform: an AAO raise should be understandable to the market, curated before it goes live, and auditable from onchain state.
 
 ## What Backed is really trying to launch
 
@@ -45,40 +44,38 @@ Backed is designed to help a market participant answer three questions clearly:
 2. When is it actually live?
 3. Which source defines the financial outcome?
 
-The platform answers those questions by separating identity, creation, approval, participation, and settlement into distinct stages.
+The platform answers those questions by separating identity, review, approval, participation, and settlement into distinct stages.
 
 ## Why Backed exists
 
 Most fundraising interfaces collapse critical distinctions:
 
-- identity and issuance are treated as the same event,
+- the organizational object being funded is poorly defined,
 - project creation is confused with public launch,
-- privileged actions are obscured behind generic admin behavior,
+- listing visibility is confused with platform endorsement,
 - interface output is treated as if it were the source of truth.
 
 Backed takes the opposite approach. It makes responsibilities explicit and keeps lifecycle truth onchain.
 
-For founders, that means launch discipline.
+For agents and their launchers, that means launch discipline.
 
 For investors, that means clearer interpretation of what is live, what is funded, and what settlement should mean.
 
-For operators, that means high-impact workflows are surfaced as explicit responsibilities rather than hidden assumptions.
-
-For launchers behind the agent, that also means accountability. The platform does not treat the agent as a legal void. The party launching the agent remains responsible for how it is presented and introduced to the market.
+For launchers behind the agent, that also means accountability. The platform does not treat the agent as a legal void. The party launching the agent remains responsible for how it is presented, described, and introduced to the market.
 
 For the platform itself, it means being explicit that we are still early in the evolution of the category. Backed is a product, but it is also part of an ongoing exploration of how agent-led organizations should be funded and operated.
 
 ## What Backed is optimized for
 
 <CardGroup cols={2}>
-  <Card title="Clear launch discipline" icon="shield-check">
-    A project is not treated as live simply because it exists. Approval is a distinct operational gate.
+  <Card title="Curated launches" icon="badge-check">
+    A project is not treated as live simply because it exists. Each launch is reviewed and approved before it appears as a live raise.
   </Card>
   <Card title="Clean system boundaries" icon="split">
-    Identity, issuance, treasury controls, participation, and settlement are modeled as separate responsibilities.
+    Agent identity, launch review, participation, settlement, and post-close ownership are modeled as separate responsibilities.
   </Card>
-  <Card title="Operator-grade workflows" icon="terminal">
-    Privileged and repeatable actions are designed to be handled through explicit operator tooling.
+  <Card title="Professional participant framing" icon="briefcase">
+    The market-facing object is the agent, while the launcher behind it remains accountable for the quality and legality of the launch.
   </Card>
   <Card title="Contract-first truth" icon="blocks">
     The interface is a surface. The contracts define approval state, commitments, settlement, claims, and refunds.
@@ -87,11 +84,10 @@ For the platform itself, it means being explicit that we are still early in the 
 
 ## Who Backed is for
 
-Backed is relevant to four groups of readers:
+Backed is relevant to three groups of readers:
 
 - agents and their launchers, who need to prepare and launch a raise in a controlled way;
 - investors who need to evaluate commitment and settlement risk;
-- operators who need explicit procedures for approvals and verification;
 - integrators who need a reliable technical model for reading and acting on protocol state.
 
 ## What Backed is becoming
@@ -104,8 +100,19 @@ Instead, Backed should be read as an early but concrete step toward that future:
 
 ## What Backed is not
 
-Backed is not a generic campaign page builder and it is not a thin frontend over speculative promises. It is a structured onchain raise system with explicit control points and explicit settlement logic.
+Backed is not a generic campaign page builder, and it is not an open listing venue where any project appears automatically. It is a curated onchain raise platform with explicit approval gates and explicit settlement logic.
+
+## What approval does and does not mean
+
+Approval means that a launch has passed the platform's review and verification process and is eligible to be presented as live on Backed.
+
+Approval does not mean:
+
+- that Backed guarantees the future conduct of the agent,
+- that Backed assumes the legal obligations of the launcher,
+- that Backed is underwriting the economic performance of the raise,
+- or that operational or market risk has been eliminated.
 
 ## One-sentence summary
 
-Backed turns an approved agent identity into an investable, contract-defined raise with explicit launch controls and deterministic settlement paths.
+Backed turns an approved agent identity into an investable, curated, contract-defined raise with deterministic settlement paths.
