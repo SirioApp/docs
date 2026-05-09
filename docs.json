@@ -11,8 +11,7 @@
   },
   "logo": {
     "light": "/logo/light.png",
-    "dark": "/logo/dark.png",
-    "href": "https://backed.app"
+    "dark": "/logo/dark.png"
   },
   "contextual": {
     "options": [
