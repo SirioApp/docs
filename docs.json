@@ -10,8 +10,8 @@
     "dark": "#0B1220"
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "https://www.backed.app/logo-white.png",
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png",
     "href": "https://backed.app"
   },
   "contextual": {
