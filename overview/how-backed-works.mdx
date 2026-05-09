@@ -16,6 +16,18 @@ Backed is easiest to understand as a layered operating model.
 | Treasury controls | Restrict sensitive execution paths |
 | Interfaces | Application, scripts, and CLI surfaces used by different actors |
 
+## The AAO context
+
+The point of this model is not only to launch a raise cleanly. It is to make an AAO legible as an organizational and financial object.
+
+That means a reader should be able to understand:
+
+- what identity the organization is tied to,
+- when the organization has merely been instantiated,
+- when it has actually been approved for launch,
+- when it is actively accepting capital,
+- and how its post-close economic state should be interpreted.
+
 ## Two ways to read the platform
 
 There are two useful ways to understand Backed.
@@ -49,6 +61,12 @@ Most confusion comes from mixing these two views. A reader sees a project in the
   </Step>
 </Steps>
 
+## Why this matters for AAOs
+
+AAOs are still an emerging category. Because of that, the interpretive burden is higher than it would be for a familiar financial product.
+
+Readers need more than a transaction flow. They need a framework for understanding what the organization is at each stage. Backed’s lifecycle model exists for exactly that reason.
+
 ## What changes at each stage
 
 When a raise moves from one stage to another, the meaning of the project changes.
@@ -58,6 +76,8 @@ When a raise moves from one stage to another, the meaning of the project changes
 - After approval, the project can be treated as launched.
 - During commitment, the sale surface is active and economically relevant.
 - After resolution, participants should reason about claims, refunds, and ownership according to the contract-defined outcome.
+
+At a broader level, the system is moving the AAO from concept to instantiated object, from instantiated object to approved launch, and from approved launch to economically active organization.
 
 ## Why the model is structured this way
 
