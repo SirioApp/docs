@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "name": "Backed",
   "theme": "mint",
   "description": "Canonical platform documentation for Backed on MegaETH.",
@@ -11,7 +11,8 @@
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://backed.app"
   },
   "contextual": {
     "options": [
@@ -28,13 +29,13 @@
     "links": [
       {
         "label": "Platform",
-        "href": "https://backed.fi"
+        "href": "https://backed.app"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Launch App",
-      "href": "https://backed.fi"
+      "href": "https://backed.app"
     }
   },
   "footer": {

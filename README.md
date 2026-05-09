@@ -15,7 +15,7 @@ This repository is the source of truth for Backed documentation.
 ## Publishing
 
 1. Use this repository as the docs source.
-2. Publish on a dedicated docs domain such as `docs.backed.fi`.
+2. Publish on a dedicated docs domain such as `docs.backed.app`.
 3. Set `NEXT_PUBLIC_DOCS_URL` in the frontend app so `/documentation` redirects to the published docs.
 
 ## Editing standard
