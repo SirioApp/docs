@@ -1,6 +1,6 @@
 ---
 title: Roles and Responsibilities
-description: The responsibilities of founders, investors, and operators.
+description: The responsibilities of founders, investors, operators, and the contract layer itself.
 icon: users
 ---
 
@@ -21,7 +21,7 @@ They should:
 
 ## Investors
 
-Investors commit capital into the sale contract and should evaluate the raise using contract-backed facts.
+Investors commit capital into the sale contract and should evaluate the raise using contract-backed facts rather than interface assumptions alone.
 
 They should:
 
@@ -41,6 +41,15 @@ They are responsible for:
 - signer correctness,
 - allowlist and treasury boundaries,
 - state verification when interfaces disagree.
+
+## Contracts
+
+The contract layer is the authoritative lifecycle surface. It determines:
+
+- whether a project is approved,
+- whether a sale is active, finalized, or failed,
+- whether claims or refunds are available,
+- which addresses and balances define current state.
 
 ## Boundary table
 

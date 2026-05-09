@@ -1,6 +1,6 @@
 ---
 title: Security Model
-description: Security and trust assumptions behind Backed.
+description: Security and trust assumptions behind Backed for users, operators, and integrators.
 icon: lock
 ---
 
@@ -30,3 +30,7 @@ Users should assume:
 - the manifests correctly resolve the intended contracts,
 - operators are using the right signer on the right environment,
 - collateral assumptions are correctly configured.
+
+## What this means in practice
+
+Backed reduces ambiguity by moving critical lifecycle decisions onchain, but it does not remove the need for disciplined operations. Approval, environment selection, and privileged writes remain meaningful trust surfaces.

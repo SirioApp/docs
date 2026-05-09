@@ -1,6 +1,6 @@
 ---
 title: Architecture
-description: High-level contract-centric architecture of Backed.
+description: High-level contract-centric architecture of Backed across identity, issuance, sale, and control layers.
 icon: blocks
 ---
 
@@ -37,3 +37,12 @@ Treasury actions are intentionally constrained instead of being assumed safe by 
 ### Environment boundary
 
 Testnet and mainnet are separate operational surfaces with different manifests and addresses.
+
+## Architectural reading rule
+
+When reviewing the platform, read from the inside out:
+
+1. contracts define state,
+2. manifests define targeting,
+3. interfaces define convenience,
+4. operators define execution discipline.

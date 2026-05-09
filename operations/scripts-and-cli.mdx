@@ -1,6 +1,6 @@
 ---
 title: Scripts and CLI
-description: Operator-facing scripts, environment variables, and command patterns.
+description: Operator-facing scripts, environment variables, and command patterns for controlled workflows.
 icon: terminal
 ---
 
@@ -68,3 +68,7 @@ Use scripts or CLI when:
 - the action must be repeatable,
 - the environment and signer must be explicit,
 - post-action verification is required.
+
+## Operating principle
+
+The closer an action is to approval, treasury control, or authoritative state verification, the more likely it should be handled through explicit operator tooling rather than through a convenience surface.

@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Canonical documentation for Backed, structured for founders, investors, operators, and integrators.
+description: Canonical platform documentation for Backed across product, operations, protocol, and risk.
 icon: compass
 ---
 
@@ -8,13 +8,13 @@ icon: compass
 
 Backed is capital infrastructure for autonomous organizations on MegaETH.
 
-This documentation is organized around the platform itself, not around internal package boundaries.
+This documentation is organized around the platform itself rather than around internal repositories or implementation layers.
 
-It is written for four audiences:
+It is written for four primary audiences:
 
-- founders launching raises,
-- investors evaluating participation,
-- operators running privileged workflows,
+- founders preparing and launching raises,
+- investors evaluating participation and settlement risk,
+- operators managing controlled workflows,
 - integrators building against the protocol surfaces.
 
 <Card
@@ -23,50 +23,10 @@ It is written for four audiences:
   href="/guides/getting-started"
   horizontal
 >
-  Use the guided entry point if you want the shortest path to the right mental model.
+  Begin here if you want the shortest path to the correct platform model and operating assumptions.
 </Card>
 
-## Read by audience
-
-<Columns cols={2}>
-  <Card title="Founders" icon="badge-plus" href="/guides/founder-guide">
-    How to prepare, create, and launch a raise correctly.
-  </Card>
-  <Card title="Investors" icon="hand-coins" href="/guides/investor-guide">
-    How to verify a raise, commit capital, and reason about settlement.
-  </Card>
-  <Card title="Operators" icon="shield-check" href="/operations/operator-model">
-    Privileged workflows, verification discipline, and runbooks.
-  </Card>
-  <Card title="Integrators" icon="plug" href="/technical/integration-patterns">
-    Technical reference, environment targeting, and recommended read-write patterns.
-  </Card>
-</Columns>
-
-## Read by topic
-
-<CardGroup cols={3}>
-  <Card title="Platform model" icon="layout-dashboard" href="/overview/what-is-backed">
-    What Backed is, how it works, and the concepts it depends on.
-  </Card>
-  <Card title="Raise lifecycle" icon="route-highway" href="/guides/raise-lifecycle">
-    The end-to-end flow from identity prerequisite to post-close outcomes.
-  </Card>
-  <Card title="Operational playbooks" icon="list-checks" href="/operations/checklists">
-    Checklist-driven guidance for high-impact workflows.
-  </Card>
-  <Card title="Technical architecture" icon="blocks" href="/technical/architecture">
-    Contract stack, runtime responsibilities, and deployment boundaries.
-  </Card>
-  <Card title="Deployment reference" icon="server" href="/technical/deployments">
-    Current MegaETH environments, chain IDs, RPCs, and addresses.
-  </Card>
-  <Card title="Trust model" icon="lock" href="/trust/security-model">
-    Security assumptions, operator risk, and practical trust boundaries.
-  </Card>
-</CardGroup>
-
-## Platform facts
+## At a glance
 
 | Topic | Current model |
 | --- | --- |
@@ -76,3 +36,54 @@ It is written for four audiences:
 | Identity dependency | ERC8004 Identity Registry |
 | Launch gate | Explicit project approval |
 | Source of truth | Deployed contracts |
+
+## Read by audience
+
+<Columns cols={2}>
+  <Card title="Founders" icon="badge-plus" href="/guides/founder-guide">
+    How to prepare a raise, structure launch readiness, and coordinate approval correctly.
+  </Card>
+  <Card title="Investors" icon="hand-coins" href="/guides/investor-guide">
+    How to evaluate a raise, commit capital, and interpret post-close outcomes.
+  </Card>
+  <Card title="Operators" icon="shield-check" href="/operations/operator-model">
+    Controlled workflows, verification discipline, and incident-oriented runbooks.
+  </Card>
+  <Card title="Integrators" icon="plug" href="/technical/integration-patterns">
+    Deployment-aware integration patterns, contract reads, and write confirmation workflows.
+  </Card>
+</Columns>
+
+## Read by topic
+
+<CardGroup cols={3}>
+  <Card title="Platform overview" icon="layout-dashboard" href="/overview/what-is-backed">
+    What Backed is, the problem it solves, and the operating model behind the product.
+  </Card>
+  <Card title="Raise lifecycle" icon="route-highway" href="/guides/raise-lifecycle">
+    The full sequence from identity prerequisite through settlement and redemption.
+  </Card>
+  <Card title="Operational controls" icon="list-checks" href="/operations/checklists">
+    Pre-flight and verification checklists for creation, approval, launch, and incident response.
+  </Card>
+  <Card title="Technical architecture" icon="blocks" href="/technical/architecture">
+    Contract layers, runtime responsibilities, and the boundaries that shape protocol behavior.
+  </Card>
+  <Card title="Deployment reference" icon="server" href="/technical/deployments">
+    Environment-specific chain IDs, RPC endpoints, and active contract addresses.
+  </Card>
+  <Card title="Risk and trust" icon="lock" href="/trust/security-model">
+    Security assumptions, operator risk, and the practical boundaries users should understand.
+  </Card>
+</CardGroup>
+
+## Reading principle
+
+Backed separates product explanation, operational guidance, technical reference, and risk disclosure on purpose.
+
+That separation matters because:
+
+- a project can exist before it is approved,
+- a surface can be usable without being authoritative,
+- an investor flow can be intuitive while still depending on contract-defined settlement,
+- an operator workflow can be simple while still carrying high consequence.

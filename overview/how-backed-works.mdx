@@ -1,54 +1,66 @@
 ---
 title: How Backed Works
-description: The platform model from identity through settlement.
+description: The platform model from identity prerequisite through launch, commitment, and settlement.
 icon: route
 ---
 
 # How Backed Works
 
-Backed is easiest to understand as a layered system.
+Backed is easiest to understand as a layered operating model.
 
 | Layer | Role |
 | --- | --- |
-| Identity | Resolves the agent referenced by a raise |
-| Factory | Creates projects, stores metadata, and gates approval |
-| Sale | Handles commitments, finalization, claims, and refunds |
-| Treasury controls | Restrict operational execution paths |
-| Interfaces | UI, scripts, and CLI used by different actors |
+| Identity | Resolves the agent referenced by the raise |
+| Factory | Creates projects, stores project metadata, and gates approval |
+| Sale | Manages commitments, finalization, claims, and refunds |
+| Treasury controls | Restrict sensitive execution paths |
+| Interfaces | Application, scripts, and CLI surfaces used by different actors |
 
 ## Core flow
 
 <Steps>
   <Step title="Identity already exists">
-    A valid agent identity must already exist in the ERC8004 Identity Registry.
+    A valid agent identity must already exist in the ERC8004 Identity Registry before the raise can be opened.
   </Step>
-  <Step title="Project is configured and created">
-    The factory creates a project using agent, metadata, collateral, timing, and token settings.
+  <Step title="A project is configured">
+    The founder or operator defines project metadata, collateral assumptions, timing, and token configuration.
   </Step>
-  <Step title="Project is approved">
-    An authorized operator explicitly approves the project before it should be treated as live.
+  <Step title="The project is created">
+    The factory creates the project onchain and establishes the addresses needed for the raise lifecycle.
   </Step>
-  <Step title="Investors commit capital">
-    Participants approve USDM and commit into the sale during the active window.
+  <Step title="The project is approved">
+    An authorized operator approves the project before it should be treated as live or marketed as launched.
   </Step>
-  <Step title="The raise settles">
-    Claims, refunds, and later redemption behavior are determined by the sale and vault state.
+  <Step title="Capital is committed">
+    Investors approve USDM and commit capital during the active sale window.
+  </Step>
+  <Step title="The sale resolves">
+    Finalization, refundability, claims, and later redemption behavior are determined by sale and vault state.
   </Step>
 </Steps>
 
-## Design principles
+## Why the model is structured this way
 
 <AccordionGroup>
-  <Accordion title="Identity is a prerequisite, not a side effect">
-    Backed does not pretend that creating a raise also creates a valid identity. Identity is upstream and explicit.
+  <Accordion title="Identity is a prerequisite">
+    Backed does not treat identity creation as an implicit side effect of opening a raise. Identity is upstream and explicit.
   </Accordion>
   <Accordion title="Creation is not launch">
-    A project can exist onchain before it is approved. Approval exists to enforce a deliberate launch boundary.
+    A project can exist onchain before it is approved. Approval exists to preserve a deliberate launch boundary.
   </Accordion>
   <Accordion title="Interfaces do not own state">
-    The application, scripts, and CLI read and write against the contracts. They do not define lifecycle truth.
+    Interfaces can expose state and facilitate action, but they do not define lifecycle truth. The contracts do.
   </Accordion>
-  <Accordion title="Environment selection is operationally significant">
-    Testnet and mainnet are separate deployment surfaces. Wrong-environment reads and writes are meaningful failures.
+  <Accordion title="Environment is a real risk boundary">
+    Testnet and mainnet are separate deployment surfaces. Wrong-environment reads and writes are not cosmetic mistakes.
   </Accordion>
 </AccordionGroup>
+
+## Practical implication
+
+Anyone evaluating a raise should separate four different questions:
+
+- Does the project exist?
+- Has it been approved?
+- Is the sale currently active?
+- What does the current sale state imply for capital, claims, or refunds?

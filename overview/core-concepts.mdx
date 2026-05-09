@@ -1,6 +1,6 @@
 ---
 title: Core Concepts
-description: Definitions and concepts used throughout the Backed platform.
+description: Definitions and concepts used throughout the Backed platform and documentation.
 icon: shapes
 ---
 
@@ -8,23 +8,23 @@ icon: shapes
 
 ## Agent identity
 
-Every raise in Backed is attached to an existing agent identity from the ERC8004 Identity Registry.
+Every raise in Backed is attached to an existing agent identity from the ERC8004 Identity Registry. Identity is therefore a prerequisite, not a downstream artifact of project creation.
 
 ## Project
 
-A project is the factory-level record created for a raise. It contains metadata and references the sale, treasury, executor, and collateral configuration that define the raise surface.
+A project is the factory-level record created for a raise. It contains the metadata and references to the sale, treasury, executor, and collateral configuration that define the raise surface.
 
 ## Approval
 
-Approval is a distinct operator action that determines whether a project should be treated as launched.
+Approval is a distinct operator action that determines whether a project should be treated as launched. Creation alone is not enough.
 
 ## Sale state
 
-The sale contract defines the live status of commitments, finalization, claims, refunds, and accepted capital.
+The sale contract defines the live status of commitments, accepted capital, finalization, claims, and refunds.
 
 ## Share token
 
-Post-raise ownership resolves through the vault share token, not through marketing labels or offchain records.
+Post-raise ownership resolves through the vault share token rather than through offchain records or interface labels.
 
 ## Environment
 

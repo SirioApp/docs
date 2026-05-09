@@ -151,11 +151,6 @@
           "anchor": "MegaETH",
           "href": "https://www.megaeth.com",
           "icon": "globe"
-        },
-        {
-          "anchor": "Mintlify",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
         }
       ]
     }

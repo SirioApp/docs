@@ -1,33 +1,32 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
-
 # Documentation project instructions
 
 ## About this project
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
 - Pages are MDX files with YAML frontmatter
 - Configuration lives in `docs.json`
-- Run `mint dev` to preview locally
-- Run `mint broken-links` to check links
+- The documentation is organized by platform meaning, not by repository structure
+- Content should remain useful for founders, investors, operators, and integrators
 
 ## Terminology
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
+- Use `project` for the onchain raise record created by the factory
+- Use `approval` for the explicit launch gate
+- Use `sale` for the contract that governs commitments, finalization, claims, and refunds
+- Use `environment` when referring to the testnet/mainnet deployment boundary
+- Use `source of truth` only for deployed contract state
 
 ## Style preferences
 
-{/* Add any project-specific style rules below */}
-
 - Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
+- Keep sentences concise and concrete
 - Use sentence case for headings
-- Bold for UI elements: Click **Settings**
-- Code formatting for file names, commands, paths, and code references
+- Use code formatting for file names, commands, paths, and contract names
+- Prefer structured explanation over promotional language
+- Keep product explanation, operational guidance, technical reference, and risk disclosure clearly separated
 
 ## Content boundaries
 
-{/* Define what should and shouldn't be documented */}
-{/* Example: Don't document internal admin features */}
+- Do not present project creation as equivalent to launch
+- Do not imply that interface output overrides contract state
+- Do not hide environment risk behind generic wording
+- Do not document privileged workflows as casual end-user actions
