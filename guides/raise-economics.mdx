@@ -1,0 +1,125 @@
+---
+title: Raise Economics
+description: Soft cap, hard cap, lockup, and the financial rules participants should understand before committing.
+icon: chart-column
+---
+
+# Raise Economics
+
+This page explains the core economic terms of a Backed raise.
+
+These terms should be understood before a participant commits capital and before an agent launcher presents the raise publicly.
+
+## Commitment asset
+
+Backed currently uses **USDM** as the commitment asset in the active deployment model.
+
+Participants approve USDM and commit it to the sale contract while the raise is active.
+
+## Soft cap
+
+The **soft cap** is the minimum funding threshold required for the raise to succeed.
+
+In the protocol and interface surfaces, this is represented through the minimum raise value for the relevant collateral.
+
+Practically, the soft cap answers one question:
+
+> What is the minimum amount of capital that must be committed for this raise to be treated as successful?
+
+If the raise is finalized without meeting the soft cap:
+
+- the raise fails,
+- no successful vault funding outcome occurs,
+- and each participant can reclaim their full commitment.
+
+## Hard cap
+
+The **hard cap** is the maximum amount of capital that the raise is designed to accept.
+
+It exists to define the upper bound of the raise rather than leaving the funding outcome open-ended.
+
+Practically, the hard cap answers a different question:
+
+> What is the maximum amount of capital this raise should accept?
+
+## Soft cap and hard cap together
+
+The two values serve different purposes:
+
+- the soft cap establishes the minimum viable raise size;
+- the hard cap establishes the maximum intended raise size.
+
+That means a raise can have:
+
+- both a soft cap and a hard cap,
+- only a hard cap,
+- or collateral-specific bounds defined through the protocol configuration.
+
+In the standard participant reading model:
+
+- the soft cap matters for success or failure,
+- the hard cap matters for sizing and upper-bound interpretation.
+
+## What happens above the hard cap
+
+Where commitments exceed the accepted amount defined by the raise outcome, the excess should not be treated as permanently captured capital.
+
+In practice, participants should understand that:
+
+- accepted capital and total committed capital are not always identical,
+- overflow conditions can result in refund amounts rather than additional accepted exposure,
+- and the relevant source of truth remains the final contract state.
+
+## Lockup period
+
+The current Backed AAO raise model uses a **30-day lockup period**.
+
+This lockup matters because the raise is not designed as instant in-and-out liquidity during the active operating window.
+
+The lockup exists to align the raise with the underlying AAO model:
+
+- capital is raised for a real operating or strategic purpose,
+- the agent needs a stable period in which to act,
+- and participants should not interpret the raise as on-demand liquidity during that period.
+
+## How to think about the 30-day lockup
+
+The lockup is best understood as a discipline around capital stability rather than a cosmetic timing parameter.
+
+In practical terms, participants should assume that:
+
+- the raise is built for a committed capital window,
+- the vault ownership surface is not equivalent to unrestricted immediate redemption,
+- and post-close liquidity is shaped by lockup and settlement conditions rather than by simple UI availability.
+
+## Why these terms matter
+
+In a conventional product, funding terms can sometimes be reduced to a simple progress bar.
+
+That is not enough here.
+
+In Backed, soft cap, hard cap, and lockup are part of how an AAO becomes credible as a capital structure. They define:
+
+- the minimum threshold for success,
+- the upper bound for participation,
+- and the time horizon within which capital is expected to remain committed to the operating thesis.
+
+## What investors should verify
+
+Before committing, an investor should verify:
+
+- the commitment asset,
+- the active sale window,
+- the soft cap,
+- the hard cap,
+- the current amount committed,
+- and the lockup assumptions attached to the raise.
+
+## What launchers should communicate clearly
+
+Before promoting a raise, the launcher behind the agent should be able to explain:
+
+- why the soft cap is set where it is,
+- why the hard cap is set where it is,
+- why the lockup is necessary,
+- and what post-close outcomes participants should expect if the raise succeeds or fails.

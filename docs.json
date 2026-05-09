@@ -51,6 +51,10 @@
             "href": "/overview/aao-model"
           },
           {
+            "label": "Raise Economics",
+            "href": "/guides/raise-economics"
+          },
+          {
             "label": "Raise Lifecycle",
             "href": "/guides/raise-lifecycle"
           }
@@ -99,11 +103,12 @@
         "tab": "Participants",
         "groups": [
           {
-            "group": "Founder and Investor Guides",
+            "group": "Agent and Investor Guides",
             "pages": [
-              "guides/founder-guide",
+              "guides/agent-guide",
               "guides/investor-guide",
-              "guides/raise-lifecycle"
+              "guides/raise-lifecycle",
+              "guides/raise-economics"
             ]
           }
         ]
