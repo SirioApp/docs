@@ -1,0 +1,32 @@
+---
+title: Verification and Incidents
+description: How to reason about discrepancies, failed assumptions, and high-stakes verification.
+icon: siren
+---
+
+# Verification and Incidents
+
+When something looks wrong, start by assuming the contracts are right and your assumptions may be wrong.
+
+## Verification order
+
+1. Confirm environment.
+2. Confirm project ID.
+3. Confirm the factory address.
+4. Confirm the sale address.
+5. Read current approval and sale state.
+6. Compare interface output only after the onchain facts are established.
+
+## Typical incident classes
+
+| Incident | First thing to check |
+| --- | --- |
+| A raise appears missing | Wrong environment or wrong project ID |
+| A raise appears live too early | Whether approval actually exists |
+| Claims are unavailable | Whether the sale is finalized |
+| Refunds are unavailable | Whether the sale is actually failed |
+| Output looks inconsistent between tools | Whether all tools resolve the same deployment manifest |
+
+<Tip>
+  Many “bugs” in operator workflows are actually environment mismatches or stale assumptions about approval or sale state.
+</Tip>

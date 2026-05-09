@@ -1,0 +1,26 @@
+---
+title: Risk Boundaries
+description: Operational and interpretive risks that users and operators should keep in mind.
+icon: triangle-alert
+---
+
+# Risk Boundaries
+
+The largest practical risks in Backed are usually not theoretical. They are operational.
+
+## Primary risks
+
+| Risk | Description |
+| --- | --- |
+| Wrong environment | Reads or writes target the wrong chain and wrong contracts |
+| Premature launch assumptions | A project exists but is not yet approved |
+| Collateral confusion | Participants misunderstand the active commitment asset |
+| Signer misuse | A privileged key is used incorrectly or against the wrong target |
+| Interface-state mismatch | A surface shows stale or incomplete information |
+
+## How to reduce these risks
+
+- verify onchain before acting in high-stakes cases,
+- make environment choice explicit,
+- separate creation from launch mentally and operationally,
+- use scripts or CLI when repeatability and verification matter.

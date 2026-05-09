@@ -1,0 +1,42 @@
+---
+title: Deployments
+description: Environment-specific deployment facts for Backed on MegaETH.
+icon: server
+---
+
+# Deployments
+
+Backed currently operates with explicit manifests for MegaETH testnet and mainnet.
+
+## Environment matrix
+
+| Environment | Chain ID | RPC | Version |
+| --- | --- | --- | --- |
+| MegaETH Testnet | `6343` | `https://carrot.megaeth.com/rpc` | `official-2026-04-24` |
+| MegaETH Mainnet | `4326` | `https://mainnet.megaeth.com/rpc` | `official-2026-04-24` |
+
+## Testnet addresses
+
+| Contract | Address |
+| --- | --- |
+| `SafeModuleSetup` | `0x7b6EbB0ede8ac0224a176663e6c07Dece0a37010` |
+| `ContractAllowlist` | `0x54459A9431bD98c754180DEB32B067Cf31bDfF33` |
+| `AgentRaiseFactory` | `0x577be362178d20A3370722807d0294fA5D8A5a2A` |
+| `USDM` | `0x9f5A17BD53310D012544966b8e3cF7863fc8F05f` |
+| `ERC8004_IdentityRegistry` | `0x8004A818BFB912233c491871b3d84c89A494BD9e` |
+
+## Mainnet addresses
+
+| Contract | Address |
+| --- | --- |
+| `SafeModuleSetup` | `0x54459A9431bD98c754180DEB32B067Cf31bDfF33` |
+| `ContractAllowlist` | `0x577be362178d20A3370722807d0294fA5D8A5a2A` |
+| `AgentRaiseFactory` | `0x45179eE92887e5770E42CD239644bc7b662673af` |
+| `USDM` | `0xFAfDdbb3FC7688494971a79cc65DCa3EF82079E7` |
+| `ERC8004_IdentityRegistry` | `0x8004A169FB4a3325136EB29fA0ceB6D2e539a432` |
+
+## Deployment rule
+
+<Warning>
+  Every privileged action should begin by re-confirming environment, RPC, signer, and target contract addresses.
+</Warning>

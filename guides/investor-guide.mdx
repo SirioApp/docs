@@ -1,0 +1,49 @@
+---
+title: Investor Guide
+description: How investors should evaluate and participate in a Backed raise.
+icon: hand-coins
+---
+
+# Investor Guide
+
+This guide is for participants committing capital into a Backed raise.
+
+## What to verify before committing
+
+1. The environment: testnet or mainnet.
+2. The project identifier and project name.
+3. The collateral token: USDM.
+4. The current sale window and approval state.
+5. The current sale status according to the contract.
+
+## Commitment model
+
+Investors approve USDM and commit into the sale contract while the sale is active.
+
+The important rule is simple:
+
+<Note>
+  Commitments, claims, refunds, and accepted amounts are outcomes of contract state, not promises made by interface copy.
+</Note>
+
+## After the sale closes
+
+Depending on sale state, investors may see:
+
+- a finalized sale with claim paths,
+- a failed sale with refund paths,
+- later redemption behavior through the vault ownership surface.
+
+## Practical investor discipline
+
+<AccordionGroup>
+  <Accordion title="If the UI is unclear">
+    Verify the relevant sale state directly from the chain rather than inferring from labels, cached values, or screenshots.
+  </Accordion>
+  <Accordion title="If a raise looks live but feels inconsistent">
+    Check whether the project is actually approved and whether you are reading the correct environment.
+  </Accordion>
+  <Accordion title="If settlement behavior seems delayed">
+    Verify whether the sale is finalized, failed, or waiting on the relevant post-close workflow.
+  </Accordion>
+</AccordionGroup>

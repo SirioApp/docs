@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Backed is capital infrastructure for autonomous organizations on MegaETH.
+description: Canonical documentation for Backed, structured for founders, investors, operators, and integrators.
 icon: compass
 ---
 
@@ -8,70 +8,71 @@ icon: compass
 
 Backed is capital infrastructure for autonomous organizations on MegaETH.
 
-The platform is built around one core workflow:
+This documentation is organized around the platform itself, not around internal package boundaries.
 
-1. an agent identity exists,
-2. a raise is created against that identity,
-3. the raise is explicitly approved,
-4. capital is committed in USDM,
-5. the sale settles onchain,
-6. participants claim, refund, or redeem based on sale state.
+It is written for four audiences:
 
-This documentation is intentionally organized around the platform itself, not around individual repositories. Technical implementation details are included, but they live under technical reference where they belong.
+- founders launching raises,
+- investors evaluating participation,
+- operators running privileged workflows,
+- integrators building against the protocol surfaces.
 
 <Card
-  title="Start with the platform"
+  title="Start here"
   icon="rocket"
-  href="/platform/overview"
+  href="/guides/getting-started"
   horizontal
 >
-  Read the shortest clear explanation of what Backed is, how raises work, and where responsibility sits.
+  Use the guided entry point if you want the shortest path to the right mental model.
 </Card>
 
-## Read by intent
+## Read by audience
 
 <Columns cols={2}>
-  <Card title="Understand the product" icon="layout-dashboard" href="/platform/overview">
-    Platform model, core concepts, and roles across founders, investors, and operators.
+  <Card title="Founders" icon="badge-plus" href="/guides/founder-guide">
+    How to prepare, create, and launch a raise correctly.
   </Card>
-  <Card title="Follow the raise lifecycle" icon="route" href="/lifecycle/overview">
-    From identity prerequisite to creation, approval, commitment, settlement, and redemption.
+  <Card title="Investors" icon="hand-coins" href="/guides/investor-guide">
+    How to verify a raise, commit capital, and reason about settlement.
   </Card>
-  <Card title="Run operations safely" icon="shield-check" href="/operators/overview">
-    Operator workflows, scripts, CLI usage, and explicit control of privileged actions.
+  <Card title="Operators" icon="shield-check" href="/operations/operator-model">
+    Privileged workflows, verification discipline, and runbooks.
   </Card>
-  <Card title="Go technical" icon="code" href="/technical/architecture">
-    Contract roles, deployments, runtime resolution, and trust boundaries.
+  <Card title="Integrators" icon="plug" href="/technical/integration-patterns">
+    Technical reference, environment targeting, and recommended read-write patterns.
   </Card>
 </Columns>
 
-## Platform facts
+## Read by topic
 
 <CardGroup cols={3}>
-  <Card title="MegaETH" icon="globe">
-    Backed currently operates across MegaETH testnet and mainnet deployments.
+  <Card title="Platform model" icon="layout-dashboard" href="/overview/what-is-backed">
+    What Backed is, how it works, and the concepts it depends on.
   </Card>
-  <Card title="USDM collateral" icon="wallet">
-    The active deployment model uses USDM as the collateral asset for commitments.
+  <Card title="Raise lifecycle" icon="route-highway" href="/guides/raise-lifecycle">
+    The end-to-end flow from identity prerequisite to post-close outcomes.
   </Card>
-  <Card title="Contracts first" icon="blocks">
-    Deployed contracts define lifecycle state. Interfaces only expose and act on it.
+  <Card title="Operational playbooks" icon="list-checks" href="/operations/checklists">
+    Checklist-driven guidance for high-impact workflows.
+  </Card>
+  <Card title="Technical architecture" icon="blocks" href="/technical/architecture">
+    Contract stack, runtime responsibilities, and deployment boundaries.
+  </Card>
+  <Card title="Deployment reference" icon="server" href="/technical/deployments">
+    Current MegaETH environments, chain IDs, RPCs, and addresses.
+  </Card>
+  <Card title="Trust model" icon="lock" href="/trust/security-model">
+    Security assumptions, operator risk, and practical trust boundaries.
   </Card>
 </CardGroup>
 
-## Documentation principles
+## Platform facts
 
-<AccordionGroup>
-  <Accordion title="Platform before package">
-    This documentation explains Backed as a platform first. Frontend, scripts, and CLI are treated as surfaces, not as the organizing taxonomy.
-  </Accordion>
-  <Accordion title="Onchain before interface">
-    Contracts are authoritative. If the product output and chain state diverge, the chain wins.
-  </Accordion>
-  <Accordion title="Operators are explicit">
-    Approval and other write actions are documented as controlled workflows, not hidden implementation details.
-  </Accordion>
-  <Accordion title="Environment clarity matters">
-    Testnet and mainnet are separate operational surfaces. Mixing them is treated as an error, not a minor inconvenience.
-  </Accordion>
-</AccordionGroup>
+| Topic | Current model |
+| --- | --- |
+| Network family | MegaETH |
+| Active environments | Testnet and Mainnet |
+| Commitment asset | USDM |
+| Identity dependency | ERC8004 Identity Registry |
+| Launch gate | Explicit project approval |
+| Source of truth | Deployed contracts |

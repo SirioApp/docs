@@ -1,43 +1,34 @@
 ---
 title: Runtime and Data
-description: How the current application resolves environment state, clients, contracts, and read models.
+description: How application surfaces resolve environment state and render protocol state.
 icon: database
 ---
 
 # Runtime and Data
 
-This page documents how the current application runtime is composed.
+Backed application surfaces resolve environment-specific manifests and read state from the deployed contracts.
 
-## Runtime surfaces
+## Runtime model
 
-| Surface | Path | Purpose |
-| --- | --- | --- |
-| Providers | `app/providers.tsx` | Composes authentication, wallet, and optional terminal providers |
-| Deployment resolver | `lib/deployment.ts` | Resolves testnet or mainnet and exposes the active manifest |
-| Contract resolver | `lib/contracts.ts` | Maps the active manifest into typed contract addresses |
-| Read client | `hooks/useMegaReadClient.ts` | Creates the viem public client for the selected environment |
-| Raise contract helpers | `lib/contracts/raise.ts` | Parses project, sale, and global config reads |
+The runtime is responsible for:
+
+- selecting the active deployment,
+- resolving contract addresses from that deployment,
+- building read clients,
+- formatting contract outputs for UI and operator workflows.
 
 ## Data model rule
 
-Backed uses the interface runtime to read and format state, not to define it.
+The runtime can format, cache, and present state. It does not own lifecycle truth.
 
-That means:
+## Practical implication
 
-- typed parsers are useful,
-- cached UI state is useful,
-- but the contracts still own the truth.
+When two sources disagree:
 
-## Frontend responsibilities
+1. trust the deployed contract reads,
+2. verify the environment,
+3. verify the interface is pointing at the same manifest.
 
-The application currently handles:
+## Product data versus protocol state
 
-- wallet connectivity and session composition;
-- environment-aware contract reads;
-- user-facing raise discovery and participation flows;
-- identity-linked raise creation flows;
-- display of sale status and post-close actions.
-
-## Firebase note
-
-Public dashboard catalog data also relies on Firebase Firestore for public reads in the current product stack. That catalog data is a product concern, not the authority for core raise state.
+Certain product surfaces may use offchain systems for discovery or catalog behavior. Those systems are useful for product experience, but they are not the authority for approval state, commitment state, or settlement outcomes.

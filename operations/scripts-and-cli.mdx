@@ -1,0 +1,70 @@
+---
+title: Scripts and CLI
+description: Operator-facing scripts, environment variables, and command patterns.
+icon: terminal
+---
+
+# Scripts and CLI
+
+Backed exposes operator workflows through repository scripts and the `backed` CLI.
+
+## Repository scripts
+
+| Script | Purpose |
+| --- | --- |
+| `npm run create-raise` | Creates a raise using environment-driven configuration |
+| `npm run approve-raise` | Approves a project so it can be treated as live |
+| `npm run check-raise` | Inspects project and deployment status |
+
+## Repository script variables
+
+| Variable | Purpose |
+| --- | --- |
+| `PRIVATE_KEY` | Required signer for write actions |
+| `AGENT_ID` | Required when creating a raise |
+| `PROJECT_ID` | Required when approving a raise |
+| `NEXT_PUBLIC_MEGAETH_RPC_URL` | Optional RPC override |
+| `COLLATERAL_ADDRESS` | Optional collateral override |
+
+## CLI variables
+
+| Variable | Purpose |
+| --- | --- |
+| `BACKED_NETWORK` | Selects `testnet` or `mainnet` |
+| `BACKED_RPC_URL` | Overrides the default RPC |
+| `BACKED_FACTORY` | Overrides the resolved factory address |
+| `BACKED_ALLOWLIST` | Overrides the resolved allowlist address |
+| `BACKED_PRIVATE_KEY` | Preferred write secret |
+| `PRIVATE_KEY` | Fallback write secret |
+
+## Common command patterns
+
+<CodeGroup>
+```bash Create raise
+export PRIVATE_KEY=0x...
+export AGENT_ID=1
+export NEXT_PUBLIC_MEGAETH_ENV=testnet
+npm run create-raise
+```
+
+```bash Approve raise
+export PRIVATE_KEY=0x...
+export PROJECT_ID=1
+export NEXT_PUBLIC_MEGAETH_ENV=testnet
+npm run approve-raise
+```
+
+```bash Inspect through CLI
+backed --network testnet factory project <id>
+backed sale status --project-id <id>
+```
+</CodeGroup>
+
+## When to prefer operator tooling over the UI
+
+Use scripts or CLI when:
+
+- the action is privileged,
+- the action must be repeatable,
+- the environment and signer must be explicit,
+- post-action verification is required.

@@ -1,0 +1,34 @@
+---
+title: Operator Model
+description: Why operators exist in Backed and what they are expected to control.
+icon: shield
+---
+
+# Operator Model
+
+Backed uses an explicit operator model because some actions carry high trust and high impact.
+
+## Why operators are first-class
+
+Backed does not hide privileged workflows behind vague “admin magic.” Instead, it treats operator actions as controlled, reviewable responsibilities.
+
+## Operator responsibilities
+
+- approve projects,
+- verify environment and signer correctness,
+- inspect sale and factory state directly,
+- maintain treasury execution guardrails,
+- use scripts and CLI for repeatable or privileged actions.
+
+## Operator standard
+
+<Warning>
+  A correct signer on the wrong environment is still a dangerous mistake.
+</Warning>
+
+An operator should consider any write action incomplete until all of the following are true:
+
+1. the environment is explicit,
+2. the contract target is explicit,
+3. the signer is explicit,
+4. the expected post-write state has been verified.

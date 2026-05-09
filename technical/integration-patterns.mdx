@@ -1,0 +1,36 @@
+---
+title: Integration Patterns
+description: How integrators should think about reading and acting on Backed state.
+icon: plug
+---
+
+# Integration Patterns
+
+This page is for teams building around Backed rather than only using the product interface.
+
+## Recommended read pattern
+
+Start from the environment and factory:
+
+1. resolve the deployment manifest,
+2. resolve the factory address,
+3. enumerate or fetch the target project,
+4. resolve the sale address,
+5. derive current state from the relevant contract reads.
+
+## Recommended write pattern
+
+For any privileged action:
+
+1. bind the correct environment explicitly,
+2. bind the correct signer explicitly,
+3. read the relevant pre-state,
+4. perform the write,
+5. read the relevant post-state for confirmation.
+
+## Anti-patterns
+
+- assuming a UI label is equivalent to contract truth,
+- assuming project creation implies approval,
+- mixing testnet and mainnet assumptions in automation,
+- reading only a single surface when sale state is required.

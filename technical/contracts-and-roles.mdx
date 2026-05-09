@@ -1,0 +1,51 @@
+---
+title: Contracts and Roles
+description: Contract-specific responsibilities in the Backed raise stack.
+icon: file-code
+---
+
+# Contracts and Roles
+
+## AgentRaiseFactory
+
+The primary protocol control contract for:
+
+- project creation,
+- project discovery,
+- project metadata,
+- project approval state,
+- global configuration.
+
+## Sale
+
+The per-project contract responsible for:
+
+- commitment acceptance,
+- accepted amounts,
+- finalization,
+- claims,
+- refunds,
+- collateral accounting.
+
+## AgentVaultToken
+
+The vault share token representing post-settlement ownership.
+
+## ContractAllowlist
+
+The execution boundary that restricts what treasury-controlled execution can target.
+
+## SafeModuleSetup
+
+Deployment-side setup used when treasury control is wired through Safe modules.
+
+## External dependencies
+
+| External contract | Why it matters |
+| --- | --- |
+| ERC8004 Identity Registry | Required prerequisite for agent-linked raise creation |
+| USDM | Current commitment asset in the deployed model |
+
+<Note>
+  If the interface and the contracts disagree, the contracts win.
+</Note>

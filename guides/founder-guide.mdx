@@ -1,0 +1,46 @@
+---
+title: Founder Guide
+description: How founders should prepare, create, and launch a raise on Backed.
+icon: badge-plus
+---
+
+# Founder Guide
+
+This guide is for the team initiating a raise.
+
+## What a founder is actually doing
+
+At a practical level, a founder is not just “creating a page.” A founder is creating an onchain project that will later be approved, funded, and settled according to contract state.
+
+## Founder checklist
+
+<Steps>
+  <Step title="Confirm the agent identity">
+    Make sure the intended ERC8004 agent ID already exists and resolves to the expected wallet.
+  </Step>
+  <Step title="Prepare the raise configuration">
+    Finalize project name, description, categories, collateral assumptions, launch timing, duration, and token metadata.
+  </Step>
+  <Step title="Create the project">
+    Use the application or controlled script flow to create the raise and capture the resulting project ID.
+  </Step>
+  <Step title="Wait for approval">
+    Do not treat the project as launched until an authorized operator approves it.
+  </Step>
+  <Step title="Monitor the live raise">
+    During the sale window, monitor commitments, timing, and project state.
+  </Step>
+</Steps>
+
+## Common founder mistakes
+
+| Mistake | Why it matters |
+| --- | --- |
+| Using the wrong agent ID | The raise may point at the wrong identity or fail entirely |
+| Finalizing metadata too late | Operational confusion increases after creation |
+| Promoting before approval | The market may see a project that is not yet live |
+| Confusing testnet with mainnet | All addresses and state interpretations become unreliable |
+
+<Tip>
+  Treat approval as part of launch planning, not as a minor post-creation formality.
+</Tip>

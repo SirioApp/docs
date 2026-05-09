@@ -4,8 +4,14 @@ This repository is the source of truth for Backed documentation.
 
 ## Structure
 
-- `docs.json`: Mintlify configuration
-- `*.mdx`: editorial documentation pages
+- `docs.json`: Mintlify site configuration
+- `index.mdx`: landing page
+- `overview/`: platform-level explanation and concepts
+- `guides/`: founder, investor, and lifecycle guidance
+- `operations/`: operator workflows, checklists, and incident handling
+- `technical/`: architecture, deployments, runtime, and integrations
+- `trust/`: trust assumptions and risk boundaries
+- `support/`: FAQ
 
 ## Mintlify setup
 

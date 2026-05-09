@@ -1,0 +1,36 @@
+---
+title: Raise Lifecycle
+description: End-to-end lifecycle of a raise on Backed.
+icon: route-highway
+---
+
+# Raise Lifecycle
+
+Every Backed raise moves through a predictable sequence.
+
+## Lifecycle stages
+
+| Stage | Description |
+| --- | --- |
+| Identity | An ERC8004 agent identity already exists |
+| Configuration | The project’s economic and metadata assumptions are prepared |
+| Creation | The factory creates the project and related addresses |
+| Approval | An authorized operator approves the project |
+| Commitment | Participants commit USDM during the sale window |
+| Resolution | The sale finalizes or fails |
+| Post-close | Claims, refunds, and redemptions become available according to state |
+
+## The most important distinction
+
+Backed separates:
+
+- project existence,
+- project launch,
+- project funding,
+- project settlement.
+
+That separation is intentional. It lowers ambiguity and makes responsibility explicit.
+
+## Operating rule
+
+Do not use “launch” as a catch-all term. In Backed, creation and approval are different events with different implications.

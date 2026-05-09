@@ -40,28 +40,28 @@
   "footer": {
     "links": [
       {
-        "header": "Platform",
+        "header": "Overview",
         "items": [
           {
-            "label": "Overview",
-            "href": "/platform/overview"
+            "label": "What Is Backed",
+            "href": "/overview/what-is-backed"
           },
           {
             "label": "Raise Lifecycle",
-            "href": "/lifecycle/overview"
+            "href": "/guides/raise-lifecycle"
           }
         ]
       },
       {
-        "header": "Technical",
+        "header": "Operations",
         "items": [
           {
-            "label": "Contracts",
-            "href": "/technical/contracts"
+            "label": "Operator Model",
+            "href": "/operations/operator-model"
           },
           {
-            "label": "Deployments",
-            "href": "/technical/deployments-and-environments"
+            "label": "Scripts and CLI",
+            "href": "/operations/scripts-and-cli"
           }
         ]
       }
@@ -74,42 +74,44 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Platform",
+        "tab": "Overview",
         "groups": [
           {
             "group": "Start Here",
             "pages": [
               "index",
-              "platform/overview",
-              "platform/core-concepts",
-              "platform/roles-and-responsibilities"
-            ]
-          },
-          {
-            "group": "Raise Lifecycle",
-            "pages": [
-              "lifecycle/overview",
-              "lifecycle/creation-and-approval",
-              "lifecycle/settlement-and-redemptions"
+              "guides/getting-started",
+              "overview/what-is-backed",
+              "overview/how-backed-works",
+              "overview/core-concepts",
+              "overview/roles-and-responsibilities"
             ]
           }
         ]
       },
       {
-        "tab": "Operators",
+        "tab": "Using Backed",
         "groups": [
           {
-            "group": "Operations",
+            "group": "Audience Guides",
             "pages": [
-              "operators/overview",
-              "operators/scripts-and-cli"
+              "guides/founder-guide",
+              "guides/investor-guide",
+              "guides/raise-lifecycle"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Operations",
+        "groups": [
           {
-            "group": "Trust and Support",
+            "group": "Runbooks",
             "pages": [
-              "trust/security-model",
-              "support/faq"
+              "operations/operator-model",
+              "operations/checklists",
+              "operations/scripts-and-cli",
+              "operations/verification-and-incidents"
             ]
           }
         ]
@@ -118,12 +120,26 @@
         "tab": "Technical",
         "groups": [
           {
-            "group": "Reference",
+            "group": "Architecture and Reference",
             "pages": [
               "technical/architecture",
-              "technical/contracts",
-              "technical/deployments-and-environments",
-              "technical/runtime-and-data"
+              "technical/contracts-and-roles",
+              "technical/deployments",
+              "technical/runtime-and-data",
+              "technical/integration-patterns"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Trust",
+        "groups": [
+          {
+            "group": "Risk and Support",
+            "pages": [
+              "trust/security-model",
+              "trust/risk-boundaries",
+              "support/faq"
             ]
           }
         ]

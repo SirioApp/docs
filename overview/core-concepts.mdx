@@ -1,0 +1,41 @@
+---
+title: Core Concepts
+description: Definitions and concepts used throughout the Backed platform.
+icon: shapes
+---
+
+# Core Concepts
+
+## Agent identity
+
+Every raise in Backed is attached to an existing agent identity from the ERC8004 Identity Registry.
+
+## Project
+
+A project is the factory-level record created for a raise. It contains metadata and references the sale, treasury, executor, and collateral configuration that define the raise surface.
+
+## Approval
+
+Approval is a distinct operator action that determines whether a project should be treated as launched.
+
+## Sale state
+
+The sale contract defines the live status of commitments, finalization, claims, refunds, and accepted capital.
+
+## Share token
+
+Post-raise ownership resolves through the vault share token, not through marketing labels or offchain records.
+
+## Environment
+
+Backed runs against explicit manifests for MegaETH testnet and mainnet. Environment choice changes:
+
+- contract addresses,
+- RPC endpoints,
+- chain IDs,
+- identity registry addresses,
+- collateral addresses.
+
+<Warning>
+  If you do not know which environment you are reading or writing against, you do not yet know what state you are looking at.
+</Warning>
