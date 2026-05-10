@@ -6,7 +6,7 @@
   "description": "Canonical platform documentation for Backed on MegaETH.",
   "colors": {
     "primary": "#95d602",
-    "light": "#1F2937",
+    "light": "#95d602",
     "dark": "#95d602"
   },
   "logo": {
