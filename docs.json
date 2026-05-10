@@ -5,9 +5,9 @@
   "theme": "mint",
   "description": "Canonical platform documentation for Backed on MegaETH.",
   "colors": {
-    "primary": "#111827",
+    "primary": "#95d602",
     "light": "#1F2937",
-    "dark": "#0B1220"
+    "dark": "#95d602"
   },
   "logo": {
     "light": "/logo/light.png",
